@@ -66,6 +66,12 @@ python3 hawkctl.py bind BUTTON_4 combo:ctrl+arrow_right   # forward
 python3 hawkctl.py bind BUTTON_5 combo:ctrl+arrow_left    # back
 ```
 
+`lighting.toggle` binds a button to step through the lighting modes:
+
+```bash
+python3 hawkctl.py bind BUTTON_8 lighting.toggle          # cycle lighting modes
+```
+
 > If a binding change doesn't take effect, power-cycle the mouse (off/on, or
 > replug the dongle). The device sometimes stops accepting binding writes while
 > still reporting success; a power cycle clears it.

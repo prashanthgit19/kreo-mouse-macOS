@@ -175,7 +175,7 @@ Each binding is `[type][value lo][value hi]`:
 | `0x30` | fire key / triple click | `0x0032`, `0x0332` |
 | `0x40` | DPI action | 1 cycle, 2 up, 3 down |
 | `0x50` | DPI lock | `dpi/100 - 1` |
-| `0x60` | system | 0 disabled, 4 lighting toggle |
+| `0x60` | system | 0 disabled, 4 lighting toggle — on the Hawk Pro value 4 **cycles through the lighting modes** |
 | `0x70` | shortcut | `[modifier mask][HID usage]`, ctrl 0x01 / shift 0x02 / alt 0x04 / win 0x08 |
 | `0x80` | media | HID consumer usage (e.g. 0x00CD play/pause) |
 | `0x90` | macro slot | `[exec flags][0x20 + slot]` |
