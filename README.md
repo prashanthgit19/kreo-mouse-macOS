@@ -105,16 +105,29 @@ hawkctl.py                     the CLI
 research/hidtool.c             native IOKit transport (get/set/watch/descriptor/server)
 research/oracle/               offline harness that runs Kreo's WASM driver as a protocol oracle
 research/notes/PROTOCOL.md     the reverse-engineered protocol
+research/find_kreo.py          locate the mouse on any connection (USB / dongle / Bluetooth)
 research/probe_*.py, *.c       reconnaissance scripts used along the way
 ```
 
-## Credits & licence
+## Legal
 
-Protocol discovered by running Kreo's own WebAssembly driver as an oracle; the
-driver itself is Kreo's and is **not** redistributed here (see
-`.gitignore`). Prior art that informed the approach:
+Unofficial — not affiliated with, endorsed by, or connected to Kreo. It exists
+because the official Kontrol software is Windows-only and cannot open this mouse
+on macOS.
+
+The protocol was reverse-engineered for interoperability by running Kreo's own
+WebAssembly driver locally as an oracle. **Kreo's driver is not redistributed** —
+`research/oracle/vendor/` is gitignored and anyone reproducing the work fetches
+it themselves (see [`research/notes/PROTOCOL.md`](research/notes/PROTOCOL.md)).
+No firmware is modified; firmware updating is deliberately not implemented.
+
+## Credits
+
+Prior art that informed the approach:
 [chimera-mapper](https://github.com/SKetU-l/chimera-mapper),
 [kreo-backlight](https://github.com/yashsinghcodes/kreo-backlight),
 [kreo-macos](https://github.com/shreyasvinaya/kreo-macos).
 
-MIT for this project's own code. Not affiliated with Kreo.
+## License
+
+MIT — see [LICENSE](LICENSE).

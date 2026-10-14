@@ -258,9 +258,24 @@ read-back channel**, so `hawkctl` keeps a local model of device state in
 
 ## Method (to reproduce/extend)
 
+The vendor driver is **not** redistributed here. Fetch it yourself from Kreo's
+CDN into the gitignored `vendor/` directory:
+
 ```bash
-# 1. load the vendor driver offline and dump the schema
-cd research/oracle && node oracle.mjs schema
+cd research/oracle
+mkdir -p vendor
+curl -sO https://kontrol.kreo-tech.com/assets/kontrol-mod-c8d14f-9RhmgAWN.js
+curl -sO https://kontrol.kreo-tech.com/assets/kontrol-mod-c8d14f_bg-BmYXPgde.wasm
+mv kontrol-mod-c8d14f-9RhmgAWN.js vendor/yuandaxin-driver-glue.js
+mv kontrol-mod-c8d14f_bg-BmYXPgde.wasm vendor/
+node oracle.mjs schema
+```
+
+Then:
+
+```bash
+# 1. dump the driver's own capability schema
+node oracle.mjs schema
 
 # 2. probe a method, printing the frames it would send
 node oracle.mjs call applyDpiStage '{"stage":0,"value":1234}'
@@ -271,6 +286,9 @@ node oracle.mjs sweep ../captures/decode-sweep.json
 # 4. drive the real device (feature reads are safe; --allow-write sends)
 node oracle.mjs call applyLighting '{"channel":"main","modeId":3}' --live --allow-write
 ```
+
+If Kreo ships a new driver the filenames change — grab them from the Kontrol
+bundle's `import("./kontrol-mod-*.js")` references.
 
 ## Still open
 
