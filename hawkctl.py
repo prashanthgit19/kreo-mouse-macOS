@@ -2,6 +2,11 @@
 """
 hawkctl — configure the Kreo Hawk Pro gaming mouse on macOS.
 
+Personal project, built for my own use because Kreo's official Kontrol
+software is Windows-only. Not affiliated with, endorsed by or supported by
+Kreo. Anyone with the same problem is free to use and reproduce it (MIT);
+the protocol is documented in research/notes/PROTOCOL.md.
+
 Talks to the mouse's vendor HID config interface directly via IOKit
 (through the small `research/hidtool` helper), bypassing Chrome's WebHID
 restrictions that make Kreo's Kontrol web app unusable on macOS.
@@ -13,8 +18,9 @@ research/notes/PROTOCOL.md):
     [0] command   [1] seq   [2] frame flag   [3] checksum   [4..30] payload
     checksum = (reportId + sum(all other bytes)) & 0xFF
 
-  commands: 02 DPI stages   03 DPI stage colors   04 report rate
-            05 lift-off     06 lighting           07 sleep       08 sensor
+  commands: 01 button bindings   02 DPI stages   03 DPI stage colors
+            04 report rate   05 lift-off   06 lighting   07 sleep   08 sensor
+            11 + 10 macro slot contents
 
 Note: the report ID must be the first byte of the IOKit write buffer; that is
 handled by `hidtool`. The device persists settings but does not expose them for

@@ -1,5 +1,9 @@
 # Kreo Hawk Pro — HID protocol notes
 
+> Personal project, not affiliated with Kreo. Documented so the work can be
+> reproduced and verified by anyone rather than taken on trust. Kreo's driver is
+> not redistributed — fetch it yourself (see "Method" below).
+
 Reverse-engineered from Kreo's own Kontrol driver. No USB sniffing and no
 Windows machine were required: Kreo ships the driver as WebAssembly, so we run
 it offline as an oracle (`research/oracle/`) and record the frames it emits.

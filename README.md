@@ -2,6 +2,15 @@
 
 Configure the **Kreo Hawk Pro** gaming mouse on macOS from the command line.
 
+> **Personal project — not affiliated with Kreo.**
+> I built this for myself, for comfort: the official Kontrol software is
+> Windows-only and simply can't talk to this mouse on macOS. Nothing here is
+> endorsed by, connected to, or supported by Kreo.
+> If you're hitting the same wall, you're welcome to use it — and to reproduce
+> it. The full protocol is documented in
+> [`research/notes/PROTOCOL.md`](research/notes/PROTOCOL.md), so you can verify
+> everything yourself rather than trusting a binary.
+
 Kreo's Kontrol web app is effectively Windows-only: its config interface exposes
 a keyboard collection, and Chromium's WebHID refuses to open such devices on
 macOS. This tool talks to the mouse's vendor HID interface directly through
@@ -111,11 +120,13 @@ research/probe_*.py, *.c       reconnaissance scripts used along the way
 
 ## Legal
 
-Unofficial — not affiliated with, endorsed by, or connected to Kreo. It exists
-because the official Kontrol software is Windows-only and cannot open this mouse
-on macOS.
+**Personal project, not affiliated with Kreo.** Built for my own use because the
+official Kontrol software is Windows-only and cannot open this mouse on macOS.
+It is unofficial, unendorsed, and unsupported by Kreo — and it is not a
+replacement for their software on Windows.
 
-The protocol was reverse-engineered for interoperability by running Kreo's own
+Anyone hitting the same problem is free to use and reproduce it (MIT). The
+protocol was reverse-engineered for interoperability by running Kreo's own
 WebAssembly driver locally as an oracle. **Kreo's driver is not redistributed** —
 `research/oracle/vendor/` is gitignored and anyone reproducing the work fetches
 it themselves (see [`research/notes/PROTOCOL.md`](research/notes/PROTOCOL.md)).
