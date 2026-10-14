@@ -176,6 +176,32 @@ Macro execution flags: repeat = cycle count, `0x11` = until released (hold),
 
 The full generated table is in `research/notes/bindings.json`.
 
+#### Shortcut bindings (`0x70`) — unresolved
+
+Arbitrary combinations are encodable: the payload is
+`combo.any` with `parameters.modifiers` (bits: ctrl `0x01`, shift `0x02`,
+alt `0x04`, cmd/win `0x08`) and the key in `parameters.multimediaCode` (a HID
+keyboard usage). Cmd+C is therefore `70 08 06`.
+
+On the tested Hawk Pro we could **not** get a `0x70` binding to emit a
+keystroke on macOS: `media.*` (`0x80`) and `macro.*` (`0x90`) bindings in the
+same frame demonstrably work, but shortcut bindings never produced input, and
+frames containing them often failed to apply at all. It looks like the firmware
+does not implement keyboard-shortcut emission for this model — its only
+keyboard output is the macro engine, which cannot hold modifiers. Kreo's own
+`shortcut.*` presets are therefore Ctrl/Win-based *and* inert here.
+
+The CLI still exposes `combo:`/`mac:` so the encoding is available if a
+different firmware supports it. For real Cmd-based shortcuts on macOS, a
+host-side helper (watch the extra mouse buttons, synthesise Cmd+C via CGEvent)
+is the reliable route.
+
+#### Writes should be acknowledged
+
+The vendor driver always reads feature report 6 back immediately after writing
+(`SET` → `GET`). Writes that skipped the read applied inconsistently in testing,
+so `hawkctl` now mirrors the driver and reads back after every write.
+
 ### 0x11 / 0x10 — macro slot contents
 
 Writing a macro is two or more frames:

@@ -1,0 +1,74 @@
+[
+ {
+  "label": "multimediaCode 6",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": false,
+     "shift": false,
+     "alt": false,
+     "meta": true
+    },
+    "multimediaCode": 6
+   }
+  }
+ },
+ {
+  "label": "multimediaCode 25",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": false,
+     "shift": false,
+     "alt": false,
+     "meta": true
+    },
+    "multimediaCode": 25
+   }
+  }
+ },
+ {
+  "label": "dpiValue 6",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": false,
+     "shift": false,
+     "alt": false,
+     "meta": true
+    },
+    "dpiValue": 6
+   }
+  }
+ },
+ {
+  "label": "layerIndex 6",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": false,
+     "shift": false,
+     "alt": false,
+     "meta": true
+    },
+    "layerIndex": 6
+   }
+  }
+ }
+]

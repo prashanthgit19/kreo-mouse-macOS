@@ -55,6 +55,28 @@ def _load_table(name: str) -> dict:
 BINDING_TABLE = _load_table("bindings.json")      # optionId -> "type lo hi"
 MACRO_KEY_TABLE = _load_table("macro-keys.json")  # codeId  -> HID usage hex
 
+# key name -> HID keyboard usage, derived from the macro key table
+KEY_USAGE = {k[len("keyboard."):]: int(v, 16)
+             for k, v in MACRO_KEY_TABLE.items() if k.startswith("keyboard.")}
+# friendly aliases: digit1->1, numpad1->num1
+for _d in "1234567890":
+    if f"digit{_d}" in KEY_USAGE:
+        KEY_USAGE.setdefault(_d, KEY_USAGE[f"digit{_d}"])
+    if f"numpad{_d}" in KEY_USAGE:
+        KEY_USAGE.setdefault(f"num{_d}", KEY_USAGE[f"numpad{_d}"])
+MOD_BITS = {"ctrl": 0x01, "control": 0x01, "shift": 0x02, "alt": 0x04, "opt": 0x04,
+            "option": 0x04, "cmd": 0x08, "command": 0x08, "meta": 0x08, "gui": 0x08, "win": 0x08}
+
+# Kreo's shortcut.* presets are Windows combos (Ctrl+C, Win+D ...). These are the
+# macOS equivalents, expressed as custom combinations (combo.any).
+MAC_SHORTCUTS = {
+    "copy": "cmd+c", "paste": "cmd+v", "cut": "cmd+x", "undo": "cmd+z", "redo": "cmd+shift+z",
+    "select-all": "cmd+a", "save": "cmd+s", "save-as": "cmd+shift+s", "open": "cmd+o",
+    "print": "cmd+p", "new": "cmd+n", "close": "cmd+w", "quit": "cmd+q", "find": "cmd+f",
+    "preferences": "cmd+comma", "show-desktop": "f11", "spotlight": "cmd+space",
+    "mission-control": "ctrl+arrowup", "app-windows": "ctrl+arrowdown",
+}
+
 # The driver writes BUTTON_4 into slot 4 and BUTTON_5 into slot 3.
 CONTROL_SLOT = {"BUTTON_1": 0, "BUTTON_2": 1, "BUTTON_3": 2, "BUTTON_5": 3,
                 "BUTTON_4": 4, "BUTTON_6": 5, "BUTTON_7": 6, "BUTTON_8": 7}
@@ -161,6 +183,9 @@ def send(frames: list[bytes], dry: bool = False) -> None:
             sys.exit(f"write failed after 5 attempts ({last}).\n"
                      f"Is the mouse connected, and is the Kreo software / a browser tab closed?")
         print(f"  sent {fr.hex(' ')}")
+        # The vendor driver always reads report 6 back after a write; mirror that.
+        subprocess.run([str(HIDTOOL), "get", str(REPORT_ID), "64"],
+                       capture_output=True, text=True)
 
 
 def read_report(rid: int, length: int = 64) -> bytes:
@@ -230,9 +255,36 @@ def frame_sensor(state: dict) -> bytes:
     return frame(0x08, next_seq(state), 0x01, payload)
 
 
+def encode_combo(spec: str) -> list[int]:
+    """Encode a key combination as a binding: 'cmd+shift+v', 'f11', ..."""
+    parts = [p.strip().lower() for p in spec.split("+") if p.strip()]
+    if not parts:
+        sys.exit("empty key combination")
+    mask = 0
+    for m in parts[:-1]:
+        if m not in MOD_BITS:
+            sys.exit(f"unknown modifier '{m}' (use ctrl / shift / alt / cmd)")
+        mask |= MOD_BITS[m]
+    key = parts[-1]
+    usage = KEY_USAGE.get(key)
+    if usage is None:
+        sys.exit(f"unknown key '{key}' for a combination "
+                 f"(see research/notes/macro-keys.json)")
+    return [0x70, mask & 0xFF, usage & 0xFF]
+
+
 def encode_binding(option_id: str, params: dict | None = None) -> list[int]:
     """Encode one button binding as 3 bytes: [type][value lo][value hi]."""
     params = params or {}
+    low = option_id.lower()
+    if low.startswith("combo:"):
+        return encode_combo(option_id[6:])
+    if low.startswith("mac:"):
+        name = low[4:]
+        if name not in MAC_SHORTCUTS:
+            sys.exit(f"unknown macOS shortcut '{name}' "
+                     f"(available: {', '.join(sorted(MAC_SHORTCUTS))})")
+        return encode_combo(MAC_SHORTCUTS[name])
     if option_id == "macro.slot" or params.get("macroSlot") is not None:
         if not MACRO_TYPE_BASE:
             sys.exit("macros not supported: missing option tables")
@@ -528,6 +580,10 @@ def cmd_selftest(state: dict, args) -> None:
         ("action f1 press d4095",
          encode_macro_action({"codeId": "keyboard.f1", "event": "press", "delayMs": 4095}),
          [0x3F, 0xFF, 0x3A]),
+        ("combo cmd+c", encode_binding("combo:cmd+c"), [0x70, 0x08, 0x06]),
+        ("combo cmd+shift+z", encode_binding("combo:cmd+shift+z"), [0x70, 0x0A, 0x1D]),
+        ("mac:paste", encode_binding("mac:paste"), [0x70, 0x08, 0x19]),
+        ("mac:show-desktop", encode_binding("mac:show-desktop"), [0x70, 0x00, 0x44]),
     ]
     for name, got, want in checks:
         if got != want:

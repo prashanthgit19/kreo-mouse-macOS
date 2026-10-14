@@ -1,0 +1,182 @@
+[
+ {
+  "label": "codeId_num",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": false,
+     "shift": false,
+     "alt": false,
+     "meta": true
+    },
+    "codeId": 6
+   }
+  }
+ },
+ {
+  "label": "keyId",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": false,
+     "shift": false,
+     "alt": false,
+     "meta": true
+    },
+    "keyId": 6
+   }
+  }
+ },
+ {
+  "label": "usage",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": false,
+     "shift": false,
+     "alt": false,
+     "meta": true
+    },
+    "usage": 6
+   }
+  }
+ },
+ {
+  "label": "key",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": false,
+     "shift": false,
+     "alt": false,
+     "meta": true
+    },
+    "key": 6
+   }
+  }
+ },
+ {
+  "label": "value",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": false,
+     "shift": false,
+     "alt": false,
+     "meta": true
+    },
+    "value": 6
+   }
+  }
+ },
+ {
+  "label": "code",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": false,
+     "shift": false,
+     "alt": false,
+     "meta": true
+    },
+    "code": 6
+   }
+  }
+ },
+ {
+  "label": "hidUsage",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": false,
+     "shift": false,
+     "alt": false,
+     "meta": true
+    },
+    "hidUsage": 6
+   }
+  }
+ },
+ {
+  "label": "keyCode",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": false,
+     "shift": false,
+     "alt": false,
+     "meta": true
+    },
+    "keyCode": 6
+   }
+  }
+ },
+ {
+  "label": "codeId_str",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": false,
+     "shift": false,
+     "alt": false,
+     "meta": true
+    },
+    "codeId": "keyboard.c"
+   }
+  }
+ },
+ {
+  "label": "codeId_usage",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": false,
+     "shift": false,
+     "alt": false,
+     "meta": true
+    },
+    "codeId": "c"
+   }
+  }
+ }
+]
