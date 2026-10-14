@@ -15,9 +15,21 @@ are implemented and verified on real hardware.
 | Vendor | `0x04F3` (1267) |
 | Wired product | `0x026E` (622) |
 | 2.4G dongle product | `0x026F` (623) |
+| Bluetooth product | `0x026D` (621) — manufacturer reports as "RivieraWaves SAS" |
 | Protocol family | `yuandaxin` |
 | Driver id | `yuandaxin:hawk-pro:v1` |
 | Sensor | PixArt PAW3395 |
+
+Three connection modes. Settings are stored on the mouse and apply on all
+three, so a configuration written over USB or the dongle survives power cycles
+and carries over to Bluetooth.
+
+**Bluetooth is read-only on macOS:** feature-report reads work
+(`hidtool get 5`), but writes fail with `kIOReturnError` (0xE00002BC) — the
+Bluetooth HID stack rejects `IOHIDDeviceSetReport`. Configure over the cable or
+the dongle; the mouse then uses those settings on Bluetooth too. (Kreo's own
+Kontrol registry doesn't list a Bluetooth entry for this mouse, so the vendor
+app can't configure it over BT either.)
 
 Two HID interfaces:
 

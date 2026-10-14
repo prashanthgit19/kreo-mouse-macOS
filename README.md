@@ -81,7 +81,16 @@ The device stores its settings but does not expose them for reading, so
 `HAWKCTL_STATE`). If it drifts from the mouse, run `defaults` or set the values
 again.
 
-Wired (`PID 0x026E`) and 2.4G dongle (`PID 0x026F`) are both supported.
+Three connection modes: wired (`0x026E`), 2.4G dongle (`0x026F`) and Bluetooth
+(`0x026D`). Settings are stored on the mouse, so they survive power-off and
+apply on every mode.
+
+**Configure over the cable or the dongle.** On Bluetooth, macOS rejects
+feature-report *writes* (`kIOReturnError`) — reads work, but you can't change
+settings there. Configure once over USB/dongle and the mouse will use it over
+Bluetooth too.
+
+Wired (`PID 0x026E`) and 2.4G dongle (`PID 0x026F`) are both writable.
 
 ## Layout
 

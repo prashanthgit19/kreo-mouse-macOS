@@ -3,7 +3,7 @@
 import hid
 
 VID = 0x04F3
-PIDS = {0x026E: "wired", 0x026F: "2.4G dongle"}
+PIDS = {0x026E: "wired", 0x026F: "2.4G dongle", 0x026D: "bluetooth"}
 
 
 def main() -> None:

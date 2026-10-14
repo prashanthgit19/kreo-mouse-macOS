@@ -22,6 +22,7 @@
 #define KREO_VID 0x04F3
 #define KREO_PID_WIRED 0x026E
 #define KREO_PID_DONGLE 0x026F
+#define KREO_PID_BT 0x026D
 
 static int get_int(IOHIDDeviceRef d, CFStringRef key) {
   CFTypeRef v = IOHIDDeviceGetProperty(d, key);
@@ -50,10 +51,11 @@ static IOHIDDeviceRef find_config_node(IOHIDManagerRef mgr) {
 
 static IOHIDManagerRef make_manager(int open_it) {
   IOHIDManagerRef mgr = IOHIDManagerCreate(kCFAllocatorDefault, kIOHIDOptionsTypeNone);
-  int vids[] = {KREO_VID}; int pids[] = {KREO_PID_WIRED, KREO_PID_DONGLE};
+  int pid = 0;
+  int pids[] = {KREO_PID_WIRED, KREO_PID_DONGLE, KREO_PID_BT};
   CFMutableArrayRef matches = CFArrayCreateMutable(NULL, 0, &kCFTypeArrayCallBacks);
-  for (int i = 0; i < 2; i++) {
-    int vid = vids[0], pid = pids[i];
+  for (int i = 0; i < 3; i++) {
+    int vid = KREO_VID; pid = pids[i];
     CFNumberRef v = CFNumberCreate(NULL, kCFNumberIntType, &vid);
     CFNumberRef p = CFNumberCreate(NULL, kCFNumberIntType, &pid);
     const void *keys[] = { CFSTR(kIOHIDVendorIDKey), CFSTR(kIOHIDProductIDKey) };
