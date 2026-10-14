@@ -1,0 +1,292 @@
+[
+ {
+  "label": "A1 baseline",
+  "method": "applyDpiSettings",
+  "payload": {
+   "currentStage": 2,
+   "activeStages": 6,
+   "stages": [
+    {
+     "value": 400,
+     "color": {
+      "r": 234,
+      "g": 94,
+      "b": 86
+     }
+    },
+    {
+     "value": 800,
+     "color": {
+      "r": 0,
+      "g": 102,
+      "b": 255
+     }
+    },
+    {
+     "value": 1600,
+     "color": {
+      "r": 50,
+      "g": 170,
+      "b": 112
+     }
+    },
+    {
+     "value": 2400,
+     "color": {
+      "r": 245,
+      "g": 156,
+      "b": 37
+     }
+    },
+    {
+     "value": 3200,
+     "color": {
+      "r": 0,
+      "g": 221,
+      "b": 228
+     }
+    },
+    {
+     "value": 6400,
+     "color": {
+      "r": 181,
+      "g": 0,
+      "b": 236
+     }
+    }
+   ]
+  }
+ },
+ {
+  "label": "A2 baseline repeat",
+  "method": "applyDpiSettings",
+  "payload": {
+   "currentStage": 2,
+   "activeStages": 6,
+   "stages": [
+    {
+     "value": 400,
+     "color": {
+      "r": 234,
+      "g": 94,
+      "b": 86
+     }
+    },
+    {
+     "value": 800,
+     "color": {
+      "r": 0,
+      "g": 102,
+      "b": 255
+     }
+    },
+    {
+     "value": 1600,
+     "color": {
+      "r": 50,
+      "g": 170,
+      "b": 112
+     }
+    },
+    {
+     "value": 2400,
+     "color": {
+      "r": 245,
+      "g": 156,
+      "b": 37
+     }
+    },
+    {
+     "value": 3200,
+     "color": {
+      "r": 0,
+      "g": 221,
+      "b": 228
+     }
+    },
+    {
+     "value": 6400,
+     "color": {
+      "r": 181,
+      "g": 0,
+      "b": 236
+     }
+    }
+   ]
+  }
+ },
+ {
+  "label": "A3 baseline repeat2",
+  "method": "applyDpiSettings",
+  "payload": {
+   "currentStage": 2,
+   "activeStages": 6,
+   "stages": [
+    {
+     "value": 400,
+     "color": {
+      "r": 234,
+      "g": 94,
+      "b": 86
+     }
+    },
+    {
+     "value": 800,
+     "color": {
+      "r": 0,
+      "g": 102,
+      "b": 255
+     }
+    },
+    {
+     "value": 1600,
+     "color": {
+      "r": 50,
+      "g": 170,
+      "b": 112
+     }
+    },
+    {
+     "value": 2400,
+     "color": {
+      "r": 245,
+      "g": 156,
+      "b": 37
+     }
+    },
+    {
+     "value": 3200,
+     "color": {
+      "r": 0,
+      "g": 221,
+      "b": 228
+     }
+    },
+    {
+     "value": 6400,
+     "color": {
+      "r": 181,
+      "g": 0,
+      "b": 236
+     }
+    }
+   ]
+  }
+ },
+ {
+  "label": "B all stages=100",
+  "method": "applyDpiSettings",
+  "payload": {
+   "currentStage": 2,
+   "activeStages": 6,
+   "stages": [
+    {
+     "value": 100,
+     "color": {
+      "r": 234,
+      "g": 94,
+      "b": 86
+     }
+    },
+    {
+     "value": 100,
+     "color": {
+      "r": 0,
+      "g": 102,
+      "b": 255
+     }
+    },
+    {
+     "value": 100,
+     "color": {
+      "r": 50,
+      "g": 170,
+      "b": 112
+     }
+    },
+    {
+     "value": 100,
+     "color": {
+      "r": 245,
+      "g": 156,
+      "b": 37
+     }
+    },
+    {
+     "value": 100,
+     "color": {
+      "r": 0,
+      "g": 221,
+      "b": 228
+     }
+    },
+    {
+     "value": 100,
+     "color": {
+      "r": 181,
+      "g": 0,
+      "b": 236
+     }
+    }
+   ]
+  }
+ },
+ {
+  "label": "C all stages=9999",
+  "method": "applyDpiSettings",
+  "payload": {
+   "currentStage": 2,
+   "activeStages": 6,
+   "stages": [
+    {
+     "value": 9999,
+     "color": {
+      "r": 234,
+      "g": 94,
+      "b": 86
+     }
+    },
+    {
+     "value": 9999,
+     "color": {
+      "r": 0,
+      "g": 102,
+      "b": 255
+     }
+    },
+    {
+     "value": 9999,
+     "color": {
+      "r": 50,
+      "g": 170,
+      "b": 112
+     }
+    },
+    {
+     "value": 9999,
+     "color": {
+      "r": 245,
+      "g": 156,
+      "b": 37
+     }
+    },
+    {
+     "value": 9999,
+     "color": {
+      "r": 0,
+      "g": 221,
+      "b": 228
+     }
+    },
+    {
+     "value": 9999,
+     "color": {
+      "r": 181,
+      "g": 0,
+      "b": 236
+     }
+    }
+   ]
+  }
+ }
+]

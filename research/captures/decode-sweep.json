@@ -1,0 +1,249 @@
+[
+ {
+  "label": "light mode=0",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "modeId": 0
+  }
+ },
+ {
+  "label": "light mode=1",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "modeId": 1
+  }
+ },
+ {
+  "label": "light mode=2",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "modeId": 2
+  }
+ },
+ {
+  "label": "light mode=3",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "modeId": 3
+  }
+ },
+ {
+  "label": "light mode=4",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "modeId": 4
+  }
+ },
+ {
+  "label": "light mode=5",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "modeId": 5
+  }
+ },
+ {
+  "label": "light mode=6",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "modeId": 6
+  }
+ },
+ {
+  "label": "light mode=7",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "modeId": 7
+  }
+ },
+ {
+  "label": "light bright=0",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "brightnessIndex": 0
+  }
+ },
+ {
+  "label": "light bright=1",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "brightnessIndex": 1
+  }
+ },
+ {
+  "label": "light bright=4",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "brightnessIndex": 4
+  }
+ },
+ {
+  "label": "light bright=7",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "brightnessIndex": 7
+  }
+ },
+ {
+  "label": "light speed=0",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "speedIndex": 0
+  }
+ },
+ {
+  "label": "light speed=1",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "speedIndex": 1
+  }
+ },
+ {
+  "label": "light speed=3",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "speedIndex": 3
+  }
+ },
+ {
+  "label": "light speed=7",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "speedIndex": 7
+  }
+ },
+ {
+  "label": "light dir=0",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "directionIndex": 0
+  }
+ },
+ {
+  "label": "light dir=1",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "directionIndex": 1
+  }
+ },
+ {
+  "label": "light color=red",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "color": {
+    "r": 255,
+    "g": 0,
+    "b": 0
+   }
+  }
+ },
+ {
+  "label": "rate report-rate.125hz",
+  "method": "applyReportRate",
+  "payload": {
+   "optionId": "report-rate.125hz"
+  }
+ },
+ {
+  "label": "rate report-rate.250hz",
+  "method": "applyReportRate",
+  "payload": {
+   "optionId": "report-rate.250hz"
+  }
+ },
+ {
+  "label": "rate report-rate.500hz",
+  "method": "applyReportRate",
+  "payload": {
+   "optionId": "report-rate.500hz"
+  }
+ },
+ {
+  "label": "rate report-rate.1000hz",
+  "method": "applyReportRate",
+  "payload": {
+   "optionId": "report-rate.1000hz"
+  }
+ },
+ {
+  "label": "lod=1",
+  "method": "applySensor",
+  "payload": {
+   "lodIndex": 1
+  }
+ },
+ {
+  "label": "lod=2",
+  "method": "applySensor",
+  "payload": {
+   "lodIndex": 2
+  }
+ },
+ {
+  "label": "motionSync=on",
+  "method": "applySensor",
+  "payload": {
+   "motionSync": true
+  }
+ },
+ {
+  "label": "angleSnap=on",
+  "method": "applySensor",
+  "payload": {
+   "angleSnap": true
+  }
+ },
+ {
+  "label": "ripple=on",
+  "method": "applySensor",
+  "payload": {
+   "ripple": true
+  }
+ },
+ {
+  "label": "sleepIndex=0",
+  "method": "applySleep",
+  "payload": {
+   "sleepIndex": 0
+  }
+ },
+ {
+  "label": "sleepIndex=1",
+  "method": "applySleep",
+  "payload": {
+   "sleepIndex": 1
+  }
+ },
+ {
+  "label": "sleepIndex=3",
+  "method": "applySleep",
+  "payload": {
+   "sleepIndex": 3
+  }
+ },
+ {
+  "label": "sleepIndex=6",
+  "method": "applySleep",
+  "payload": {
+   "sleepIndex": 6
+  }
+ }
+]

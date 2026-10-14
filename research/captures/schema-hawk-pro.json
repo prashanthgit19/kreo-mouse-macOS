@@ -1,0 +1,1561 @@
+{
+  "schemaVersion": 1,
+  "deviceName": "Kreo Hawk Pro",
+  "productName": "Hawk Pro",
+  "protocol": "yuandaxin",
+  "isWireless": false,
+  "modelId": "hawk-pro",
+  "capabilities": {
+    "protocol": "yuandaxin",
+    "deviceCategory": "mouse",
+    "isWireless": false,
+    "lighting": {
+      "modes": [
+        {
+          "id": 0,
+          "name": "Off",
+          "supportsColor": false,
+          "supportsColorMode": false,
+          "supportsDirection": false,
+          "supportsSpeed": false,
+          "supportsBrightness": false,
+          "supportsSymmetry": false
+        },
+        {
+          "id": 1,
+          "name": "Rainbow Flow",
+          "supportsColor": false,
+          "supportsColorMode": false,
+          "supportsDirection": true,
+          "supportsSpeed": true,
+          "supportsBrightness": false,
+          "supportsSymmetry": false
+        },
+        {
+          "id": 2,
+          "name": "Breathe",
+          "supportsColor": false,
+          "supportsColorMode": false,
+          "supportsDirection": false,
+          "supportsSpeed": true,
+          "supportsBrightness": false,
+          "supportsSymmetry": false
+        },
+        {
+          "id": 3,
+          "name": "Steady",
+          "supportsColor": false,
+          "supportsColorMode": false,
+          "supportsDirection": false,
+          "supportsSpeed": false,
+          "supportsBrightness": true,
+          "supportsSymmetry": false
+        },
+        {
+          "id": 4,
+          "name": "Neon",
+          "supportsColor": false,
+          "supportsColorMode": false,
+          "supportsDirection": false,
+          "supportsSpeed": true,
+          "supportsBrightness": false,
+          "supportsSymmetry": false
+        },
+        {
+          "id": 5,
+          "name": "Marquee",
+          "supportsColor": false,
+          "supportsColorMode": false,
+          "supportsDirection": false,
+          "supportsSpeed": true,
+          "supportsBrightness": false,
+          "supportsSymmetry": false
+        },
+        {
+          "id": 6,
+          "name": "Rainbow Steady",
+          "supportsColor": false,
+          "supportsColorMode": false,
+          "supportsDirection": false,
+          "supportsSpeed": false,
+          "supportsBrightness": true,
+          "supportsSymmetry": false
+        },
+        {
+          "id": 7,
+          "name": "Wave",
+          "supportsColor": false,
+          "supportsColorMode": false,
+          "supportsDirection": false,
+          "supportsSpeed": true,
+          "supportsBrightness": false,
+          "supportsSymmetry": false
+        }
+      ],
+      "brightness": {
+        "1": 25,
+        "2": 50,
+        "3": 75,
+        "4": 100
+      },
+      "speed": {
+        "1": 33,
+        "2": 66,
+        "3": 100
+      },
+      "direction": {
+        "0": "Forward",
+        "1": "Reverse"
+      },
+      "supportsPerKeyRgb": false,
+      "supportsCustomFrame": false,
+      "supportsMovingOff": true,
+      "supportsProfileLightingToggle": false
+    },
+    "dpi": {
+      "maxStages": 6,
+      "valueRange": {
+        "min": 50,
+        "max": 26000,
+        "step": 50,
+        "unit": "DPI"
+      },
+      "supportsPerStageColor": true,
+      "supportsDpiLock": true
+    },
+    "sensor": {
+      "sensorName": "PixArt PAW3395",
+      "supportsMotionSync": true,
+      "supportsLod": true,
+      "lod": {
+        "1": "1",
+        "2": "2"
+      },
+      "supportsRipple": true,
+      "supportsAngleSnap": true,
+      "supportsAngleTune": false,
+      "supportsPerformanceMode": false,
+      "supportsFps20k": false
+    },
+    "reportRate": {
+      "options": [
+        {
+          "id": "report-rate.125hz",
+          "label": "125 Hz",
+          "valueHz": 125
+        },
+        {
+          "id": "report-rate.250hz",
+          "label": "250 Hz",
+          "valueHz": 250
+        },
+        {
+          "id": "report-rate.500hz",
+          "label": "500 Hz",
+          "valueHz": 500
+        },
+        {
+          "id": "report-rate.1000hz",
+          "label": "1000 Hz",
+          "valueHz": 1000
+        }
+      ]
+    },
+    "sleep": {
+      "options": {
+        "6": "1 min",
+        "12": "2 mins",
+        "18": "3 mins",
+        "30": "5 mins",
+        "60": "10 mins",
+        "90": "15 mins"
+      },
+      "timers": [
+        {
+          "id": "sleep_time",
+          "name": "Sleep Time",
+          "range": {
+            "min": 1,
+            "max": 15,
+            "step": 1,
+            "unit": "min"
+          }
+        }
+      ]
+    },
+    "macros": {
+      "maxSlots": 8,
+      "maxActionsPerSlot": 80,
+      "maxNameLength": 32,
+      "executionTypes": [
+        "FIXED_COUNT",
+        "UNTIL_RELEASED",
+        "UNTIL_ANY_PRESSED"
+      ],
+      "supportsCycleCount": true,
+      "delayMs": {
+        "min": 0,
+        "max": 4095,
+        "step": 1,
+        "unit": "ms"
+      },
+      "keyNamespace": {
+        "categories": [
+          {
+            "id": "keyboard",
+            "name": "Keyboard",
+            "order": 0,
+            "options": [
+              {
+                "id": "keyboard.a",
+                "label": "A",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.b",
+                "label": "B",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.c",
+                "label": "C",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.d",
+                "label": "D",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.e",
+                "label": "E",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.f",
+                "label": "F",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.g",
+                "label": "G",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.h",
+                "label": "H",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.i",
+                "label": "I",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.j",
+                "label": "J",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.k",
+                "label": "K",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.l",
+                "label": "L",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.m",
+                "label": "M",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.n",
+                "label": "N",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.o",
+                "label": "O",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.p",
+                "label": "P",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.q",
+                "label": "Q",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.r",
+                "label": "R",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.s",
+                "label": "S",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.t",
+                "label": "T",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.u",
+                "label": "U",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.v",
+                "label": "V",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.w",
+                "label": "W",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.x",
+                "label": "X",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.y",
+                "label": "Y",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.z",
+                "label": "Z",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.digit1",
+                "label": "1",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.digit2",
+                "label": "2",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.digit3",
+                "label": "3",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.digit4",
+                "label": "4",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.digit5",
+                "label": "5",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.digit6",
+                "label": "6",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.digit7",
+                "label": "7",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.digit8",
+                "label": "8",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.digit9",
+                "label": "9",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.digit0",
+                "label": "0",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.enter",
+                "label": "Enter",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.escape",
+                "label": "Esc",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.backspace",
+                "label": "Bksp",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.tab",
+                "label": "Tab",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.space",
+                "label": "Space",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.minus",
+                "label": "- _",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.equal",
+                "label": "= +",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.bracket_left",
+                "label": "[ {",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.bracket_right",
+                "label": "] }",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.backslash",
+                "label": "\\ |",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.semicolon",
+                "label": "; :",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.quote",
+                "label": "' \"",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.backquote",
+                "label": "` ~",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.comma",
+                "label": ", <",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.period",
+                "label": ". >",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.slash",
+                "label": "/ ?",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.caps_lock",
+                "label": "CapsLock",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.f1",
+                "label": "F1",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.f2",
+                "label": "F2",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.f3",
+                "label": "F3",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.f4",
+                "label": "F4",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.f5",
+                "label": "F5",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.f6",
+                "label": "F6",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.f7",
+                "label": "F7",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.f8",
+                "label": "F8",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.f9",
+                "label": "F9",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.f10",
+                "label": "F10",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.f11",
+                "label": "F11",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.f12",
+                "label": "F12",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.print_screen",
+                "label": "PrtScn",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.scroll_lock",
+                "label": "ScrLk",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.pause",
+                "label": "Pause",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.insert",
+                "label": "Insert",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.home",
+                "label": "Home",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.page_up",
+                "label": "PgUp",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.delete",
+                "label": "Delete",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.end",
+                "label": "End",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.page_down",
+                "label": "PgDn",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.arrow_right",
+                "label": "Right",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.arrow_left",
+                "label": "Left",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.arrow_down",
+                "label": "Down",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "keyboard.arrow_up",
+                "label": "Up",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "modifier.ctrl",
+                "label": "Ctrl",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "modifier.shift",
+                "label": "Shift",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "modifier.alt",
+                "label": "Alt",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "modifier.meta",
+                "label": "Win",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "mouse",
+            "name": "Mouse",
+            "order": 1,
+            "options": [
+              {
+                "id": "mouse.left",
+                "label": "Left Click",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "mouse.right",
+                "label": "Right Click",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "mouse.middle",
+                "label": "Middle Click",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "mouse.back",
+                "label": "Back",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              },
+              {
+                "id": "mouse.forward",
+                "label": "Forward",
+                "supportedEvents": [
+                  "press",
+                  "release"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "controlSurface": {
+      "revision": "yuandaxin:hawk-pro:v1",
+      "controls": [
+        {
+          "id": "BUTTON_1",
+          "label": "Left Click",
+          "group": "Buttons",
+          "features": {
+            "remappable": true,
+            "macroBindable": true,
+            "perControlRgb": false
+          }
+        },
+        {
+          "id": "BUTTON_2",
+          "label": "Right Click",
+          "group": "Buttons",
+          "features": {
+            "remappable": true,
+            "macroBindable": true,
+            "perControlRgb": false
+          }
+        },
+        {
+          "id": "BUTTON_3",
+          "label": "Middle Click",
+          "group": "Buttons",
+          "features": {
+            "remappable": true,
+            "macroBindable": true,
+            "perControlRgb": false
+          }
+        },
+        {
+          "id": "BUTTON_4",
+          "label": "Forward",
+          "group": "Buttons",
+          "features": {
+            "remappable": true,
+            "macroBindable": true,
+            "perControlRgb": false
+          }
+        },
+        {
+          "id": "BUTTON_5",
+          "label": "Back",
+          "group": "Buttons",
+          "features": {
+            "remappable": true,
+            "macroBindable": true,
+            "perControlRgb": false
+          }
+        },
+        {
+          "id": "BUTTON_6",
+          "label": "DPI +",
+          "group": "Buttons",
+          "features": {
+            "remappable": true,
+            "macroBindable": true,
+            "perControlRgb": false
+          }
+        },
+        {
+          "id": "BUTTON_7",
+          "label": "DPI -",
+          "group": "Buttons",
+          "features": {
+            "remappable": true,
+            "macroBindable": true,
+            "perControlRgb": false
+          }
+        },
+        {
+          "id": "BUTTON_8",
+          "label": "Win+D",
+          "group": "Buttons",
+          "features": {
+            "remappable": true,
+            "macroBindable": true,
+            "perControlRgb": false
+          }
+        }
+      ]
+    },
+    "keyRemapping": {
+      "keyCount": 8,
+      "fnLayerCount": 0,
+      "categories": [
+        {
+          "id": "mouse",
+          "name": "Mouse Buttons",
+          "order": 1,
+          "tab": "mouse",
+          "options": [
+            {
+              "id": "mouse.left",
+              "label": "Left Click",
+              "readOnly": false
+            },
+            {
+              "id": "mouse.right",
+              "label": "Right Click",
+              "readOnly": false
+            },
+            {
+              "id": "mouse.middle",
+              "label": "Middle Click",
+              "readOnly": false
+            },
+            {
+              "id": "mouse.forward",
+              "label": "Forward",
+              "readOnly": false
+            },
+            {
+              "id": "mouse.back",
+              "label": "Back",
+              "readOnly": false
+            },
+            {
+              "id": "mouse.triple_fire",
+              "label": "Triple Click",
+              "readOnly": false
+            },
+            {
+              "id": "mouse.fire_key",
+              "label": "Fire Key",
+              "parameters": {
+                "needsModifiers": false,
+                "needsMacroSlot": false,
+                "needsMacroExecutionType": false,
+                "needsMacroCycleCount": true,
+                "needsDpiValue": false,
+                "needsMultimediaCode": true,
+                "needsLayerIndex": false
+              },
+              "readOnly": false
+            }
+          ]
+        },
+        {
+          "id": "dpi",
+          "name": "DPI",
+          "order": 2,
+          "tab": "mouse",
+          "options": [
+            {
+              "id": "mouse.dpi_cycle",
+              "label": "DPI Cycle",
+              "readOnly": false
+            },
+            {
+              "id": "mouse.dpi_up",
+              "label": "DPI +",
+              "readOnly": false
+            },
+            {
+              "id": "mouse.dpi_down",
+              "label": "DPI -",
+              "readOnly": false
+            },
+            {
+              "id": "dpi.lock_200",
+              "label": "DPI Lock (200 DPI)",
+              "readOnly": false
+            },
+            {
+              "id": "dpi.lock_300",
+              "label": "DPI Lock (300 DPI)",
+              "readOnly": false
+            },
+            {
+              "id": "dpi.lock_400",
+              "label": "DPI Lock (400 DPI)",
+              "readOnly": false
+            },
+            {
+              "id": "dpi.lock_500",
+              "label": "DPI Lock (500 DPI)",
+              "readOnly": false
+            },
+            {
+              "id": "dpi.lock_600",
+              "label": "DPI Lock (600 DPI)",
+              "readOnly": false
+            },
+            {
+              "id": "dpi.lock_700",
+              "label": "DPI Lock (700 DPI)",
+              "readOnly": false
+            },
+            {
+              "id": "dpi.lock_800",
+              "label": "DPI Lock (800 DPI)",
+              "readOnly": false
+            },
+            {
+              "id": "dpi.lock_900",
+              "label": "DPI Lock (900 DPI)",
+              "readOnly": false
+            },
+            {
+              "id": "dpi.lock_1000",
+              "label": "DPI Lock (1000 DPI)",
+              "readOnly": false
+            },
+            {
+              "id": "dpi.lock_1100",
+              "label": "DPI Lock (1100 DPI)",
+              "readOnly": false
+            },
+            {
+              "id": "dpi.lock_1200",
+              "label": "DPI Lock (1200 DPI)",
+              "readOnly": false
+            }
+          ]
+        },
+        {
+          "id": "macros",
+          "name": "Macros",
+          "order": 3,
+          "tab": "macro",
+          "options": [
+            {
+              "id": "macro.slot_1",
+              "label": "Macro Slot 1",
+              "parameters": {
+                "needsModifiers": false,
+                "needsMacroSlot": true,
+                "needsMacroExecutionType": true,
+                "needsMacroCycleCount": true,
+                "needsDpiValue": false,
+                "needsMultimediaCode": false,
+                "needsLayerIndex": false
+              },
+              "readOnly": false
+            },
+            {
+              "id": "macro.slot_2",
+              "label": "Macro Slot 2",
+              "parameters": {
+                "needsModifiers": false,
+                "needsMacroSlot": true,
+                "needsMacroExecutionType": true,
+                "needsMacroCycleCount": true,
+                "needsDpiValue": false,
+                "needsMultimediaCode": false,
+                "needsLayerIndex": false
+              },
+              "readOnly": false
+            },
+            {
+              "id": "macro.slot_3",
+              "label": "Macro Slot 3",
+              "parameters": {
+                "needsModifiers": false,
+                "needsMacroSlot": true,
+                "needsMacroExecutionType": true,
+                "needsMacroCycleCount": true,
+                "needsDpiValue": false,
+                "needsMultimediaCode": false,
+                "needsLayerIndex": false
+              },
+              "readOnly": false
+            },
+            {
+              "id": "macro.slot_4",
+              "label": "Macro Slot 4",
+              "parameters": {
+                "needsModifiers": false,
+                "needsMacroSlot": true,
+                "needsMacroExecutionType": true,
+                "needsMacroCycleCount": true,
+                "needsDpiValue": false,
+                "needsMultimediaCode": false,
+                "needsLayerIndex": false
+              },
+              "readOnly": false
+            },
+            {
+              "id": "macro.slot_5",
+              "label": "Macro Slot 5",
+              "parameters": {
+                "needsModifiers": false,
+                "needsMacroSlot": true,
+                "needsMacroExecutionType": true,
+                "needsMacroCycleCount": true,
+                "needsDpiValue": false,
+                "needsMultimediaCode": false,
+                "needsLayerIndex": false
+              },
+              "readOnly": false
+            },
+            {
+              "id": "macro.slot_6",
+              "label": "Macro Slot 6",
+              "parameters": {
+                "needsModifiers": false,
+                "needsMacroSlot": true,
+                "needsMacroExecutionType": true,
+                "needsMacroCycleCount": true,
+                "needsDpiValue": false,
+                "needsMultimediaCode": false,
+                "needsLayerIndex": false
+              },
+              "readOnly": false
+            },
+            {
+              "id": "macro.slot_7",
+              "label": "Macro Slot 7",
+              "parameters": {
+                "needsModifiers": false,
+                "needsMacroSlot": true,
+                "needsMacroExecutionType": true,
+                "needsMacroCycleCount": true,
+                "needsDpiValue": false,
+                "needsMultimediaCode": false,
+                "needsLayerIndex": false
+              },
+              "readOnly": false
+            },
+            {
+              "id": "macro.slot_8",
+              "label": "Macro Slot 8",
+              "parameters": {
+                "needsModifiers": false,
+                "needsMacroSlot": true,
+                "needsMacroExecutionType": true,
+                "needsMacroCycleCount": true,
+                "needsDpiValue": false,
+                "needsMultimediaCode": false,
+                "needsLayerIndex": false
+              },
+              "readOnly": false
+            }
+          ]
+        },
+        {
+          "id": "media",
+          "name": "Media",
+          "order": 4,
+          "tab": "multimedia",
+          "options": [
+            {
+              "id": "media.play_pause",
+              "label": "Play / Pause",
+              "readOnly": false
+            },
+            {
+              "id": "media.next",
+              "label": "Next Track",
+              "readOnly": false
+            },
+            {
+              "id": "media.previous",
+              "label": "Previous Track",
+              "readOnly": false
+            },
+            {
+              "id": "media.stop",
+              "label": "Stop",
+              "readOnly": false
+            },
+            {
+              "id": "media.mute",
+              "label": "Mute",
+              "readOnly": false
+            },
+            {
+              "id": "media.volume_up",
+              "label": "Volume Up",
+              "readOnly": false
+            },
+            {
+              "id": "media.volume_down",
+              "label": "Volume Down",
+              "readOnly": false
+            },
+            {
+              "id": "media.calculator",
+              "label": "Calculator",
+              "readOnly": false
+            },
+            {
+              "id": "media.player",
+              "label": "Media Player",
+              "readOnly": false
+            },
+            {
+              "id": "media.email",
+              "label": "Email",
+              "readOnly": false
+            },
+            {
+              "id": "media.my_computer",
+              "label": "My Computer",
+              "readOnly": false
+            }
+          ]
+        },
+        {
+          "id": "shortcuts",
+          "name": "Shortcuts",
+          "order": 5,
+          "tab": "keyboard",
+          "options": [
+            {
+              "id": "shortcut.copy",
+              "label": "Copy (Ctrl+C)",
+              "readOnly": false
+            },
+            {
+              "id": "shortcut.paste",
+              "label": "Paste (Ctrl+V)",
+              "readOnly": false
+            },
+            {
+              "id": "shortcut.cut",
+              "label": "Cut (Ctrl+X)",
+              "readOnly": false
+            },
+            {
+              "id": "shortcut.select_all",
+              "label": "Select All (Ctrl+A)",
+              "readOnly": false
+            },
+            {
+              "id": "shortcut.new",
+              "label": "New (Ctrl+N)",
+              "readOnly": false
+            },
+            {
+              "id": "shortcut.save",
+              "label": "Save (Ctrl+S)",
+              "readOnly": false
+            },
+            {
+              "id": "shortcut.print",
+              "label": "Print (Ctrl+P)",
+              "readOnly": false
+            },
+            {
+              "id": "shortcut.open",
+              "label": "Open Explorer (Win+E)",
+              "readOnly": false
+            },
+            {
+              "id": "shortcut.undo",
+              "label": "Undo (Ctrl+Z)",
+              "readOnly": false
+            },
+            {
+              "id": "shortcut.show_desktop",
+              "label": "Show Desktop (Win+D)",
+              "readOnly": false
+            }
+          ]
+        },
+        {
+          "id": "combination",
+          "name": "Combinations",
+          "order": 6,
+          "tab": "keyboard",
+          "options": [
+            {
+              "id": "combo.any",
+              "label": "Custom Shortcut…",
+              "icon": "keyboard",
+              "parameters": {
+                "needsModifiers": true,
+                "needsMacroSlot": false,
+                "needsMacroExecutionType": false,
+                "needsMacroCycleCount": false,
+                "needsDpiValue": false,
+                "needsMultimediaCode": false,
+                "needsLayerIndex": false
+              },
+              "readOnly": false
+            }
+          ]
+        },
+        {
+          "id": "special",
+          "name": "Special",
+          "order": 7,
+          "tab": "multimedia",
+          "options": [
+            {
+              "id": "key.disabled",
+              "label": "Disable",
+              "readOnly": false
+            },
+            {
+              "id": "lighting.toggle",
+              "label": "Lighting Toggle",
+              "readOnly": false
+            }
+          ]
+        }
+      ]
+    },
+    "battery": {
+      "reportsVoltage": false,
+      "reportsCharging": true,
+      "smoothOnClient": true
+    },
+    "supportsNkro": false,
+    "supportsWindowsLock": false,
+    "supportsFactoryReset": true
+  },
+  "state": {
+    "connected": true,
+    "online": true,
+    "battery": {
+      "levelPercent": 100,
+      "charging": false
+    },
+    "lighting": {
+      "modeId": 1,
+      "brightnessIndex": 4,
+      "speedIndex": 3,
+      "color": {
+        "r": 64,
+        "g": 158,
+        "b": 255
+      },
+      "directionIndex": 0,
+      "enabled": true,
+      "movingOffEnabled": false
+    },
+    "dpi": {
+      "currentStage": 2,
+      "activeStages": 6,
+      "stages": [
+        {
+          "value": 400,
+          "color": {
+            "r": 234,
+            "g": 94,
+            "b": 86
+          }
+        },
+        {
+          "value": 800,
+          "color": {
+            "r": 0,
+            "g": 102,
+            "b": 255
+          }
+        },
+        {
+          "value": 1600,
+          "color": {
+            "r": 50,
+            "g": 170,
+            "b": 112
+          }
+        },
+        {
+          "value": 2400,
+          "color": {
+            "r": 245,
+            "g": 156,
+            "b": 37
+          }
+        },
+        {
+          "value": 3200,
+          "color": {
+            "r": 0,
+            "g": 221,
+            "b": 228
+          }
+        },
+        {
+          "value": 6400,
+          "color": {
+            "r": 181,
+            "g": 0,
+            "b": 236
+          }
+        }
+      ]
+    },
+    "sensor": {
+      "motionSync": true,
+      "lodIndex": 2,
+      "angleSnap": false,
+      "ripple": false
+    },
+    "reportRate": {
+      "selectedId": "report-rate.1000hz",
+      "valueHz": 1000
+    },
+    "sleepIndex": 6,
+    "sleepTimers": {
+      "sleep_time": 1
+    },
+    "activeProfile": 0,
+    "controlBindings": [
+      {
+        "controlId": "BUTTON_1",
+        "optionId": "mouse.left",
+        "label": "Left Click"
+      },
+      {
+        "controlId": "BUTTON_2",
+        "optionId": "mouse.right",
+        "label": "Right Click"
+      },
+      {
+        "controlId": "BUTTON_3",
+        "optionId": "mouse.middle",
+        "label": "Middle Click"
+      },
+      {
+        "controlId": "BUTTON_4",
+        "optionId": "mouse.forward",
+        "label": "Forward"
+      },
+      {
+        "controlId": "BUTTON_5",
+        "optionId": "mouse.back",
+        "label": "Back"
+      },
+      {
+        "controlId": "BUTTON_6",
+        "optionId": "mouse.dpi_up",
+        "label": "DPI +"
+      },
+      {
+        "controlId": "BUTTON_7",
+        "optionId": "mouse.dpi_down",
+        "label": "DPI -"
+      },
+      {
+        "controlId": "BUTTON_8",
+        "optionId": "shortcut.show_desktop",
+        "label": "Win+D"
+      }
+    ]
+  }
+}

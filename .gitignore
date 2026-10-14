@@ -1,0 +1,18 @@
+# Kreo's vendor driver bundle — research reference only, never redistribute.
+research/oracle/vendor/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Compiled research helpers
+research/hidtool
+research/hidtest
+research/probe_iokit
+
+# Runtime artifacts
+research/captures/*.jsonl
+*.log
+.DS_Store

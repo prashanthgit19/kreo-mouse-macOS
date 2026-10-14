@@ -1,0 +1,408 @@
+[
+ {
+  "label": "baseline",
+  "method": "applyDpiSettings",
+  "payload": {
+   "currentStage": 2,
+   "activeStages": 6,
+   "stages": [
+    {
+     "value": 400,
+     "color": {
+      "r": 234,
+      "g": 94,
+      "b": 86
+     }
+    },
+    {
+     "value": 800,
+     "color": {
+      "r": 0,
+      "g": 102,
+      "b": 255
+     }
+    },
+    {
+     "value": 1600,
+     "color": {
+      "r": 50,
+      "g": 170,
+      "b": 112
+     }
+    },
+    {
+     "value": 2400,
+     "color": {
+      "r": 245,
+      "g": 156,
+      "b": 37
+     }
+    },
+    {
+     "value": 3200,
+     "color": {
+      "r": 0,
+      "g": 221,
+      "b": 228
+     }
+    },
+    {
+     "value": 6400,
+     "color": {
+      "r": 181,
+      "g": 0,
+      "b": 236
+     }
+    }
+   ]
+  }
+ },
+ {
+  "label": "stage0 value=5000",
+  "method": "applyDpiSettings",
+  "payload": {
+   "currentStage": 2,
+   "activeStages": 6,
+   "stages": [
+    {
+     "value": 5000,
+     "color": {
+      "r": 234,
+      "g": 94,
+      "b": 86
+     }
+    },
+    {
+     "value": 800,
+     "color": {
+      "r": 0,
+      "g": 102,
+      "b": 255
+     }
+    },
+    {
+     "value": 1600,
+     "color": {
+      "r": 50,
+      "g": 170,
+      "b": 112
+     }
+    },
+    {
+     "value": 2400,
+     "color": {
+      "r": 245,
+      "g": 156,
+      "b": 37
+     }
+    },
+    {
+     "value": 3200,
+     "color": {
+      "r": 0,
+      "g": 221,
+      "b": 228
+     }
+    },
+    {
+     "value": 6400,
+     "color": {
+      "r": 181,
+      "g": 0,
+      "b": 236
+     }
+    }
+   ]
+  }
+ },
+ {
+  "label": "stage0 color=red",
+  "method": "applyDpiSettings",
+  "payload": {
+   "currentStage": 2,
+   "activeStages": 6,
+   "stages": [
+    {
+     "value": 400,
+     "color": {
+      "r": 255,
+      "g": 0,
+      "b": 0
+     }
+    },
+    {
+     "value": 800,
+     "color": {
+      "r": 0,
+      "g": 102,
+      "b": 255
+     }
+    },
+    {
+     "value": 1600,
+     "color": {
+      "r": 50,
+      "g": 170,
+      "b": 112
+     }
+    },
+    {
+     "value": 2400,
+     "color": {
+      "r": 245,
+      "g": 156,
+      "b": 37
+     }
+    },
+    {
+     "value": 3200,
+     "color": {
+      "r": 0,
+      "g": 221,
+      "b": 228
+     }
+    },
+    {
+     "value": 6400,
+     "color": {
+      "r": 181,
+      "g": 0,
+      "b": 236
+     }
+    }
+   ]
+  }
+ },
+ {
+  "label": "currentStage=0",
+  "method": "applyDpiSettings",
+  "payload": {
+   "currentStage": 0,
+   "activeStages": 6,
+   "stages": [
+    {
+     "value": 400,
+     "color": {
+      "r": 234,
+      "g": 94,
+      "b": 86
+     }
+    },
+    {
+     "value": 800,
+     "color": {
+      "r": 0,
+      "g": 102,
+      "b": 255
+     }
+    },
+    {
+     "value": 1600,
+     "color": {
+      "r": 50,
+      "g": 170,
+      "b": 112
+     }
+    },
+    {
+     "value": 2400,
+     "color": {
+      "r": 245,
+      "g": 156,
+      "b": 37
+     }
+    },
+    {
+     "value": 3200,
+     "color": {
+      "r": 0,
+      "g": 221,
+      "b": 228
+     }
+    },
+    {
+     "value": 6400,
+     "color": {
+      "r": 181,
+      "g": 0,
+      "b": 236
+     }
+    }
+   ]
+  }
+ },
+ {
+  "label": "activeStages=3",
+  "method": "applyDpiSettings",
+  "payload": {
+   "currentStage": 2,
+   "activeStages": 3,
+   "stages": [
+    {
+     "value": 400,
+     "color": {
+      "r": 234,
+      "g": 94,
+      "b": 86
+     }
+    },
+    {
+     "value": 800,
+     "color": {
+      "r": 0,
+      "g": 102,
+      "b": 255
+     }
+    },
+    {
+     "value": 1600,
+     "color": {
+      "r": 50,
+      "g": 170,
+      "b": 112
+     }
+    },
+    {
+     "value": 2400,
+     "color": {
+      "r": 245,
+      "g": 156,
+      "b": 37
+     }
+    },
+    {
+     "value": 3200,
+     "color": {
+      "r": 0,
+      "g": 221,
+      "b": 228
+     }
+    },
+    {
+     "value": 6400,
+     "color": {
+      "r": 181,
+      "g": 0,
+      "b": 236
+     }
+    }
+   ]
+  }
+ },
+ {
+  "label": "stage5 value=100",
+  "method": "applyDpiSettings",
+  "payload": {
+   "currentStage": 2,
+   "activeStages": 6,
+   "stages": [
+    {
+     "value": 400,
+     "color": {
+      "r": 234,
+      "g": 94,
+      "b": 86
+     }
+    },
+    {
+     "value": 800,
+     "color": {
+      "r": 0,
+      "g": 102,
+      "b": 255
+     }
+    },
+    {
+     "value": 1600,
+     "color": {
+      "r": 50,
+      "g": 170,
+      "b": 112
+     }
+    },
+    {
+     "value": 2400,
+     "color": {
+      "r": 245,
+      "g": 156,
+      "b": 37
+     }
+    },
+    {
+     "value": 3200,
+     "color": {
+      "r": 0,
+      "g": 221,
+      "b": 228
+     }
+    },
+    {
+     "value": 100,
+     "color": {
+      "r": 181,
+      "g": 0,
+      "b": 236
+     }
+    }
+   ]
+  }
+ },
+ {
+  "label": "stage5 color=green",
+  "method": "applyDpiSettings",
+  "payload": {
+   "currentStage": 2,
+   "activeStages": 6,
+   "stages": [
+    {
+     "value": 400,
+     "color": {
+      "r": 234,
+      "g": 94,
+      "b": 86
+     }
+    },
+    {
+     "value": 800,
+     "color": {
+      "r": 0,
+      "g": 102,
+      "b": 255
+     }
+    },
+    {
+     "value": 1600,
+     "color": {
+      "r": 50,
+      "g": 170,
+      "b": 112
+     }
+    },
+    {
+     "value": 2400,
+     "color": {
+      "r": 245,
+      "g": 156,
+      "b": 37
+     }
+    },
+    {
+     "value": 3200,
+     "color": {
+      "r": 0,
+      "g": 221,
+      "b": 228
+     }
+    },
+    {
+     "value": 6400,
+     "color": {
+      "r": 0,
+      "g": 255,
+      "b": 0
+     }
+    }
+   ]
+  }
+ }
+]

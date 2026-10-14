@@ -1,0 +1,82 @@
+[
+ {
+  "label": "dpiStage stage0 value=5000",
+  "method": "applyDpiStage",
+  "payload": {
+   "stage": 0,
+   "value": 5000
+  }
+ },
+ {
+  "label": "dpiStage stage0 color=red",
+  "method": "applyDpiStage",
+  "payload": {
+   "stage": 0,
+   "color": {
+    "r": 255,
+    "g": 0,
+    "b": 0
+   }
+  }
+ },
+ {
+  "label": "dpiStage stage3 value=800",
+  "method": "applyDpiStage",
+  "payload": {
+   "stage": 3,
+   "value": 800
+  }
+ },
+ {
+  "label": "lighting dpiLight modeId=3",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "dpiLight",
+   "modeId": 3
+  }
+ },
+ {
+  "label": "lighting main modeId=2",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "main",
+   "modeId": 2
+  }
+ },
+ {
+  "label": "lighting dpiLight brightnessIndex=4",
+  "method": "applyLighting",
+  "payload": {
+   "channel": "dpiLight",
+   "brightnessIndex": 4
+  }
+ },
+ {
+  "label": "sensor motionSync=false",
+  "method": "applySensor",
+  "payload": {
+   "motionSync": false
+  }
+ },
+ {
+  "label": "sensor lodIndex=1",
+  "method": "applySensor",
+  "payload": {
+   "lodIndex": 1
+  }
+ },
+ {
+  "label": "reportRate 500hz",
+  "method": "applyReportRate",
+  "payload": {
+   "optionId": "report-rate.500hz"
+  }
+ },
+ {
+  "label": "sleep sleepIndex=3",
+  "method": "applySleep",
+  "payload": {
+   "sleepIndex": 3
+  }
+ }
+]

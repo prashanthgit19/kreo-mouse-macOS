@@ -1,0 +1,48 @@
+{
+  "_comment": "WebHID-style descriptor context for the Hawk Pro config interface, reconstructed from the report descriptor dumped via hidtool (wired PID 0x026E).",
+  "outputReportId": null,
+  "outputReportLength": null,
+  "outputReportLengths": {},
+  "inputReportId": 1,
+  "inputReportLength": 8,
+  "featureReportId": 189,
+  "featureReportLength": 135,
+  "isWireless": false,
+  "collections": [
+    {
+      "usagePage": 1,
+      "usage": 6,
+      "inputReports": [{ "reportId": 1, "reportByteLength": 8 }],
+      "outputReports": [],
+      "featureReports": []
+    },
+    {
+      "usagePage": 12,
+      "usage": 1,
+      "inputReports": [{ "reportId": 2, "reportByteLength": 2 }],
+      "outputReports": [],
+      "featureReports": []
+    },
+    {
+      "usagePage": 1,
+      "usage": 128,
+      "inputReports": [{ "reportId": 3, "reportByteLength": 1 }],
+      "outputReports": [],
+      "featureReports": []
+    },
+    {
+      "usagePage": 10,
+      "usage": 0,
+      "inputReports": [{ "reportId": 4, "reportByteLength": 31 }],
+      "outputReports": [],
+      "featureReports": [
+        { "reportId": 5, "reportByteLength": 31 },
+        { "reportId": 6, "reportByteLength": 31 },
+        { "reportId": 188, "reportByteLength": 7 },
+        { "reportId": 189, "reportByteLength": 135 },
+        { "reportId": 190, "reportByteLength": 135 },
+        { "reportId": 191, "reportByteLength": 135 }
+      ]
+    }
+  ]
+}
