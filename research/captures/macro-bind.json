@@ -1,0 +1,108 @@
+[
+ {
+  "label": "fc slot0 cyc1",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "macro.slot",
+   "parameters": {
+    "macroSlot": 0,
+    "macroExecutionType": "FIXED_COUNT",
+    "macroCycleCount": 1
+   }
+  }
+ },
+ {
+  "label": "fc slot0 cyc5",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "macro.slot",
+   "parameters": {
+    "macroSlot": 0,
+    "macroExecutionType": "FIXED_COUNT",
+    "macroCycleCount": 5
+   }
+  }
+ },
+ {
+  "label": "fc slot3 cyc3",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "macro.slot",
+   "parameters": {
+    "macroSlot": 3,
+    "macroExecutionType": "FIXED_COUNT",
+    "macroCycleCount": 3
+   }
+  }
+ },
+ {
+  "label": "until_released slot0",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "macro.slot",
+   "parameters": {
+    "macroSlot": 0,
+    "macroExecutionType": "UNTIL_RELEASED"
+   }
+  }
+ },
+ {
+  "label": "until_any slot0",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "macro.slot",
+   "parameters": {
+    "macroSlot": 0,
+    "macroExecutionType": "UNTIL_ANY_PRESSED"
+   }
+  }
+ },
+ {
+  "label": "combo ctrl+c",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": true,
+     "shift": false,
+     "alt": false,
+     "meta": false
+    },
+    "codeId": "keyboard.c",
+    "event": "press"
+   }
+  }
+ },
+ {
+  "label": "combo ctrl+shift+s",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "combo.any",
+   "parameters": {
+    "modifiers": {
+     "ctrl": true,
+     "shift": true,
+     "alt": false,
+     "meta": false
+    },
+    "codeId": "keyboard.s",
+    "event": "press"
+   }
+  }
+ }
+]

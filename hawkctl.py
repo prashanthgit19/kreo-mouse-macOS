@@ -27,6 +27,7 @@ import json
 import os
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -41,6 +42,29 @@ LIGHT_MODES = {
 }
 # sleep index is in 10-second units; these are the presets shown by the app
 SLEEP_PRESETS = {6: "1 min", 12: "2 mins", 18: "3 mins", 30: "5 mins", 60: "10 mins", 90: "15 mins"}
+
+# Action tables generated from the vendor driver (see research/oracle + notes/).
+NOTES_DIR = HERE / "research" / "notes"
+
+
+def _load_table(name: str) -> dict:
+    path = NOTES_DIR / name
+    return json.loads(path.read_text()) if path.exists() else {}
+
+
+BINDING_TABLE = _load_table("bindings.json")      # optionId -> "type lo hi"
+MACRO_KEY_TABLE = _load_table("macro-keys.json")  # codeId  -> HID usage hex
+
+# The driver writes BUTTON_4 into slot 4 and BUTTON_5 into slot 3.
+CONTROL_SLOT = {"BUTTON_1": 0, "BUTTON_2": 1, "BUTTON_3": 2, "BUTTON_5": 3,
+                "BUTTON_4": 4, "BUTTON_6": 5, "BUTTON_7": 6, "BUTTON_8": 7}
+SLOT_CONTROL = {v: k for k, v in CONTROL_SLOT.items()}
+MACRO_TYPE_BASE = {"FIXED_COUNT": 0x20, "UNTIL_RELEASED": 0x10, "UNTIL_ANY_PRESSED": 0x40}
+DEFAULT_BINDINGS = {
+    "BUTTON_1": "mouse.left", "BUTTON_2": "mouse.right", "BUTTON_3": "mouse.middle",
+    "BUTTON_4": "mouse.forward", "BUTTON_5": "mouse.back", "BUTTON_6": "mouse.dpi_up",
+    "BUTTON_7": "mouse.dpi_down", "BUTTON_8": "shortcut.show_desktop",
+}
 
 DEFAULT_STATE = {
     "dpi": {
@@ -62,6 +86,11 @@ DEFAULT_STATE = {
     "reportRateHz": 1000,
     "sleepIndex": 6,
     "seq": 2,
+    "bindings": DEFAULT_BINDINGS,
+    "macros": [
+        {"name": "", "executionType": "FIXED_COUNT", "cycleCount": 1, "actions": []}
+        for _ in range(8)
+    ],
 }
 
 # ---------------------------------------------------------------------------
@@ -119,10 +148,18 @@ def send(frames: list[bytes], dry: bool = False) -> None:
         if dry:
             print(f"  DRY  {fr.hex(' ')}")
             continue
-        proc = subprocess.run([str(HIDTOOL), "set", str(REPORT_ID), fr.hex(" ")],
-                              capture_output=True, text=True)
-        if proc.returncode != 0:
-            sys.exit(f"hidtool set failed: {(proc.stderr or proc.stdout).strip()}")
+        last = ""
+        for attempt in range(5):  # the vendor app retries feature writes too
+            if attempt:
+                time.sleep(0.15 * attempt)
+            proc = subprocess.run([str(HIDTOOL), "set", str(REPORT_ID), fr.hex(" ")],
+                                  capture_output=True, text=True)
+            if proc.returncode == 0:
+                break
+            last = (proc.stderr or proc.stdout).strip() or f"exit {proc.returncode}"
+        else:
+            sys.exit(f"write failed after 5 attempts ({last}).\n"
+                     f"Is the mouse connected, and is the Kreo software / a browser tab closed?")
         print(f"  sent {fr.hex(' ')}")
 
 
@@ -191,6 +228,60 @@ def frame_sensor(state: dict) -> bytes:
                1 if s.get("motionSync", True) else 0,
                1 if s.get("ripple") else 0] + [0xFF] * 28
     return frame(0x08, next_seq(state), 0x01, payload)
+
+
+def encode_binding(option_id: str, params: dict | None = None) -> list[int]:
+    """Encode one button binding as 3 bytes: [type][value lo][value hi]."""
+    params = params or {}
+    if option_id == "macro.slot" or params.get("macroSlot") is not None:
+        if not MACRO_TYPE_BASE:
+            sys.exit("macros not supported: missing option tables")
+        slot = int(params.get("macroSlot", 0)) & 0x07
+        et = params.get("macroExecutionType", "FIXED_COUNT")
+        base = MACRO_TYPE_BASE.get(et, 0x20)
+        cycle = int(params.get("macroCycleCount", 1) or 1) if et == "FIXED_COUNT" else 0
+        return [0x90, base | (slot + 1), cycle & 0xFF]
+    entry = BINDING_TABLE.get(option_id)
+    if not entry:
+        sys.exit(f"unknown binding '{option_id}' (see research/notes/bindings.json)")
+    return [int(b, 16) for b in entry.split()]
+
+
+def frame_control_bindings(state: dict) -> bytes:
+    payload: list[int] = []
+    for slot in range(8):
+        spec = state["bindings"].get(SLOT_CONTROL[slot], "key.disabled")
+        if isinstance(spec, dict):
+            payload += encode_binding(spec.get("optionId", "key.disabled"), spec.get("parameters"))
+        else:
+            payload += encode_binding(spec)
+    payload += [0xFF] * 3
+    return frame(0x01, next_seq(state), 0x01, payload)
+
+
+def encode_macro_action(action: dict) -> list[int]:
+    """Encode one macro action as 3 bytes: [0x30|delay>>8|release][delay lo][usage]."""
+    code = MACRO_KEY_TABLE.get(action["codeId"])
+    if code is None:
+        sys.exit(f"unknown macro key '{action['codeId']}' (see research/notes/macro-keys.json)")
+    delay = max(0, min(0xFFF, int(action.get("delayMs", 0))))
+    base = 0xB0 if action.get("event") == "release" else 0x30
+    return [base | ((delay >> 8) & 0x0F), delay & 0xFF, int(code, 16)]
+
+
+def frames_macro_slot(state: dict, slot: int) -> list[bytes]:
+    actions = (state["macros"][slot].get("actions") or [])
+    if not actions:
+        sys.exit("macro has no actions")
+    body: list[int] = []
+    for a in actions[:80]:
+        body += encode_macro_action(a)
+    frames = [frame(0x11, next_seq(state), 0x01, [0xFF] + [0x00] * 26)]  # prepare
+    for i in range(0, len(body), 25):                                 # 25 action bytes/frame
+        part = body[i:i + 25]
+        payload = [(slot + 1) & 0xFF] + part
+        frames.append(frame(0x10, next_seq(state), 0x01, [len(payload)] + payload))
+    return frames
 
 
 # ---------------------------------------------------------------------------
@@ -295,6 +386,79 @@ def cmd_sensor(state: dict, args) -> None:
           f"ripple={s['ripple']} lod={s['lodIndex']}")
 
 
+def cmd_bind(state: dict, args) -> None:
+    if not args.button:
+        print("button bindings:")
+        for c in sorted(CONTROL_SLOT):
+            spec = state["bindings"].get(c, "key.disabled")
+            if isinstance(spec, dict):
+                p = spec.get("parameters", {})
+                label = f"macro slot {p.get('macroSlot')} ({p.get('macroExecutionType')}, x{p.get('macroCycleCount')})"
+            else:
+                label = spec
+            print(f"  {c:<9} {label}")
+        return
+    control = args.button.upper()
+    if control not in CONTROL_SLOT:
+        sys.exit("button must be BUTTON_1 .. BUTTON_8")
+    if not args.action:
+        sys.exit("usage: hawkctl bind <BUTTON_n> <action>   (action = optionId | none | macro:<slot>)")
+    action = args.action
+    if action in ("none", "disabled", "key.disabled"):
+        state["bindings"][control] = "key.disabled"
+    elif action.startswith("macro"):
+        if ":" in action:
+            slot = int(action.split(":", 1)[1])
+        else:
+            slot = args.slot if args.slot is not None else 0
+        mode = {"repeat": "FIXED_COUNT", "button": "UNTIL_RELEASED",
+                "toggle": "UNTIL_ANY_PRESSED"}.get(args.mode or "repeat", "FIXED_COUNT")
+        state["bindings"][control] = {"optionId": "macro.slot", "parameters": {
+            "macroSlot": slot, "macroExecutionType": mode,
+            "macroCycleCount": args.cycles if args.cycles is not None else 1}}
+    else:
+        state["bindings"][control] = action
+    if not args.dry_run:
+        save_state(state)
+    send([frame_control_bindings(state)], args.dry_run)
+    print(f"{control} -> {state['bindings'][control]}")
+
+
+def cmd_macro(state: dict, args) -> None:
+    macros = state["macros"]
+    if not args.action:
+        print("macro slots (local + device):")
+        for i, m in enumerate(macros):
+            print(f"  {i}: {(m.get('name') or '(unnamed)'):<16} "
+                  f"{len(m.get('actions') or []):>2} action(s)  {m.get('executionType')}")
+        return
+    slot = args.slot if args.slot is not None else 0
+    if not 0 <= slot < 8:
+        sys.exit("macro slot must be 0..7")
+    if args.action == "clear":
+        macros[slot] = {"name": "", "executionType": "FIXED_COUNT", "cycleCount": 1, "actions": []}
+        print(f"slot {slot} cleared locally (bind a button away from it to forget it on the mouse)")
+        return
+    if args.action == "set":
+        acts = []
+        for item in [x for x in (args.actions or "").split(",") if x.strip()]:
+            parts = item.strip().split(":")
+            if len(parts) != 3:
+                sys.exit("each action must be key:event:delayMs, e.g. keyboard.a:press:0")
+            acts.append({"codeId": parts[0], "event": parts[1], "delayMs": int(parts[2])})
+        if not acts:
+            sys.exit("no actions given; use --actions keyboard.a:press:0,keyboard.a:release:50")
+        macros[slot] = {"name": args.name or "", "executionType": args.exec or "FIXED_COUNT",
+                        "cycleCount": args.cycles or 1, "actions": acts}
+        if not args.dry_run:
+            save_state(state)
+        send(frames_macro_slot(state, slot), args.dry_run)
+        print(f"slot {slot}: {len(acts)} action(s) written. Bind a button with: "
+              f"hawkctl bind BUTTON_6 macro:{slot}")
+        return
+    sys.exit("usage: hawkctl macro [set|clear] --slot N [--name ...] [--actions k:event:ms,...]")
+
+
 def cmd_defaults(state: dict, args) -> None:
     """Restore the factory-default DPI stages, lighting and sensor settings."""
     fresh = json.loads(json.dumps(DEFAULT_STATE))
@@ -304,6 +468,7 @@ def cmd_defaults(state: dict, args) -> None:
     frames.append(frame_report_rate(fresh))
     frames.append(frame_lod(fresh))
     frames.append(frame_sensor(fresh))
+    frames.append(frame_control_bindings(fresh))
     if not args.dry_run:
         save_state(fresh)
     send(frames, args.dry_run)
@@ -331,6 +496,13 @@ def cmd_selftest(state: dict, args) -> None:
          "05 19 01 0C 01 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"),
         (0x08, 0x1B, 0x01, [0, 1, 0] + [0xFF] * 28,
          "08 1B 01 13 00 01 00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF"),
+        (0x01, 0x02, 0x01, [0x10, 0x01, 0x00, 0x10, 0x02, 0x00, 0x10, 0x04, 0x00, 0x10, 0x08, 0x00, 0x10, 0x10,
+                            0x00, 0x10, 0x04, 0x00, 0x40, 0x03, 0x00, 0x70, 0x08, 0x07, 0xFF, 0xFF, 0xFF],
+         "01 02 01 4C 10 01 00 10 02 00 10 04 00 10 08 00 10 10 00 10 04 00 40 03 00 70 08 07 FF FF FF"),
+        (0x10, 0x03, 0x01, [0x07, 0x01, 0x30, 0x00, 0x04, 0xB0, 0x32, 0x04, 0x00] + [0x00] * 18,
+         "10 03 01 3C 07 01 30 00 04 B0 32 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"),
+        (0x11, 0x02, 0x01, [0xFF] + [0x00] * 26,
+         "11 02 01 19 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00"),
     ]
     ok = True
     for cmd, seq, flag, payload, expected in golden:
@@ -338,6 +510,29 @@ def cmd_selftest(state: dict, args) -> None:
         if got != expected:
             ok = False
             print(f"FAIL cmd=0x{cmd:02X}\n  got      {got}\n  expected {expected}")
+
+    checks = [
+        ("binding mouse.left", encode_binding("mouse.left"), [0x10, 0x01, 0x00]),
+        ("binding shortcut.copy", encode_binding("shortcut.copy"), [0x70, 0x01, 0x06]),
+        ("binding macro slot3 x3",
+         encode_binding("macro.slot", {"macroSlot": 3, "macroExecutionType": "FIXED_COUNT",
+                                       "macroCycleCount": 3}), [0x90, 0x24, 0x03]),
+        ("binding macro slot5 toggle",
+         encode_binding("macro.slot", {"macroSlot": 5, "macroExecutionType": "UNTIL_ANY_PRESSED"}),
+         [0x90, 0x46, 0x00]),
+        ("action a press d0", encode_macro_action({"codeId": "keyboard.a", "event": "press", "delayMs": 0}),
+         [0x30, 0x00, 0x04]),
+        ("action a release d50",
+         encode_macro_action({"codeId": "keyboard.a", "event": "release", "delayMs": 50}),
+         [0xB0, 0x32, 0x04]),
+        ("action f1 press d4095",
+         encode_macro_action({"codeId": "keyboard.f1", "event": "press", "delayMs": 4095}),
+         [0x3F, 0xFF, 0x3A]),
+    ]
+    for name, got, want in checks:
+        if got != want:
+            ok = False
+            print(f"FAIL {name}: got {[hex(x) for x in got]} want {[hex(x) for x in want]}")
     print("selftest:", "PASS" if ok else "FAIL")
     sys.exit(0 if ok else 1)
 
@@ -386,8 +581,27 @@ def main() -> None:
     p = sub.add_parser("selftest", help="verify frame encoding against captured golden frames")
     p.set_defaults(func=cmd_selftest)
 
-    p = sub.add_parser("defaults", help="restore default DPI/lighting/sensor settings")
+    p = sub.add_parser("defaults", help="restore default DPI/lighting/sensor/button settings")
     p.set_defaults(func=cmd_defaults)
+
+    p = sub.add_parser("bind", help="show or set button bindings")
+    p.add_argument("button", nargs="?", help="BUTTON_1 .. BUTTON_8")
+    p.add_argument("action", nargs="?", help="optionId (e.g. mouse.middle), 'none', or macro:<slot>")
+    p.add_argument("--slot", type=int, help="macro slot for 'macro'")
+    p.add_argument("--mode", choices=["repeat", "button", "toggle"], default="repeat",
+                   help="macro execution: repeat / button (hold) / toggle")
+    p.add_argument("--cycles", type=int, help="repeat count for --mode repeat")
+    p.set_defaults(func=cmd_bind)
+
+    p = sub.add_parser("macro", help="write a macro to an on-board slot")
+    p.add_argument("action", nargs="?", choices=["set", "clear"])
+    p.add_argument("--slot", type=int, default=0, help="macro slot 0..7")
+    p.add_argument("--name", help="macro name (host-side only)")
+    p.add_argument("--exec", choices=["FIXED_COUNT", "UNTIL_RELEASED", "UNTIL_ANY_PRESSED"],
+                   help="execution type (usually set on the button binding instead)")
+    p.add_argument("--cycles", type=int, help="repeat count")
+    p.add_argument("--actions", help="comma list of key:event:delayMs e.g. keyboard.a:press:0,keyboard.a:release:50")
+    p.set_defaults(func=cmd_macro)
 
     args = parser.parse_args()
     if not args.command:

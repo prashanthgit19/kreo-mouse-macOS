@@ -1,0 +1,202 @@
+[
+ {
+  "label": "mouse.left",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "mouse.left",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "mouse.right",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "mouse.right",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "mouse.middle",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "mouse.middle",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "mouse.forward",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "mouse.forward",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "mouse.back",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "mouse.back",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "mouse.triple_fire",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "mouse.triple_fire",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "mouse.fire_key",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "mouse.fire_key",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "mouse.dpi_cycle",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "mouse.dpi_cycle",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "mouse.dpi_up",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "mouse.dpi_up",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "mouse.dpi_down",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "mouse.dpi_down",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "dpi.lock_800",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "dpi.lock_800",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "macro.slot_1",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "macro.slot_1",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "macro.slot_8",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "macro.slot_8",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "media.play_pause",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "media.play_pause",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "media.volume_up",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "media.volume_up",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "media.my_computer",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "media.my_computer",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "shortcut.copy",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "shortcut.copy",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "shortcut.show_desktop",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "shortcut.show_desktop",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "key.disabled",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "key.disabled",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "lighting.toggle",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "lighting.toggle",
+   "parameters": {}
+  }
+ }
+]

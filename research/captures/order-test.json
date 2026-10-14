@@ -1,0 +1,32 @@
+[
+ {
+  "label": "BUTTON_4 -> mouse.left",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_4",
+   "layer": 0,
+   "optionId": "mouse.left",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "BUTTON_5 -> mouse.left",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_5",
+   "layer": 0,
+   "optionId": "mouse.left",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "BUTTON_8 -> mouse.left",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_8",
+   "layer": 0,
+   "optionId": "mouse.left",
+   "parameters": {}
+  }
+ }
+]

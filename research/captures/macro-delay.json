@@ -1,0 +1,138 @@
+[
+ {
+  "label": "delay=0",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "delay=1",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 1
+    }
+   ]
+  }
+ },
+ {
+  "label": "delay=2",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 2
+    }
+   ]
+  }
+ },
+ {
+  "label": "delay=255",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 255
+    }
+   ]
+  }
+ },
+ {
+  "label": "delay=256",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 256
+    }
+   ]
+  }
+ },
+ {
+  "label": "delay=257",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 257
+    }
+   ]
+  }
+ },
+ {
+  "label": "delay=1000",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 1000
+    }
+   ]
+  }
+ },
+ {
+  "label": "delay=4095",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 4095
+    }
+   ]
+  }
+ }
+]

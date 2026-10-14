@@ -1,0 +1,138 @@
+[
+ {
+  "label": "a press d0",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "b press d0",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.b",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "a release d0",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "release",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "a press d1",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 1
+    }
+   ]
+  }
+ },
+ {
+  "label": "a press d256",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 256
+    }
+   ]
+  }
+ },
+ {
+  "label": "f1 press d0",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.f1",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "enter press d0",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.enter",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "digit1 press d0",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.digit1",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ }
+]

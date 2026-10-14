@@ -1,0 +1,70 @@
+[
+ {
+  "label": "bind BUTTON_6 -> middle click",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_6",
+   "layer": 0,
+   "optionId": "mouse.middle",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "bind BUTTON_6 -> dpi.up",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_6",
+   "layer": 0,
+   "optionId": "dpi.up",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "bind BUTTON_6 -> keyboard.a",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_6",
+   "layer": 0,
+   "optionId": "keyboard.a",
+   "parameters": {}
+  }
+ },
+ {
+  "label": "bind BUTTON_6 -> keyboard.a +ctrl",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_6",
+   "layer": 0,
+   "optionId": "keyboard.a",
+   "parameters": {
+    "modifiers": {
+     "ctrl": true
+    }
+   }
+  }
+ },
+ {
+  "label": "bind BUTTON_6 -> macro.slot 0",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_6",
+   "layer": 0,
+   "optionId": "macro.slot",
+   "parameters": {
+    "macroSlot": 0,
+    "macroExecutionType": "FIXED_COUNT",
+    "macroCycleCount": 2
+   }
+  }
+ },
+ {
+  "label": "bind BUTTON_4 -> forward",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_4",
+   "layer": 0,
+   "optionId": "mouse.forward",
+   "parameters": {}
+  }
+ }
+]

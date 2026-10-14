@@ -16,10 +16,11 @@ Working and verified on real hardware:
 - Lighting mode, brightness and speed
 - Report rate (125 / 250 / 500 / 1000 Hz)
 - Lift-off distance and sensor toggles (motion sync, angle snap, ripple)
+- Button remapping (mouse, DPI, media, shortcuts, lighting toggle, disable)
+- On-board macros (up to 8 slots, keys with per-action delays)
 
-Not yet implemented: macros, button remapping, sleep timer. See
-[`research/notes/PROTOCOL.md`](research/notes/PROTOCOL.md) for the protocol and
-what remains.
+Not implemented: sleep timer, custom arbitrary key combos. See
+[`research/notes/PROTOCOL.md`](research/notes/PROTOCOL.md) for the protocol.
 
 ## Install
 
@@ -42,9 +43,19 @@ python3 hawkctl.py dpi stage 0                      # make stage 0 active
 python3 hawkctl.py lighting --mode 3 --brightness 4 # Steady mode
 python3 hawkctl.py rate 1000                        # polling rate
 python3 hawkctl.py sensor --lod 2 --motion-sync on   # sensor settings
+python3 hawkctl.py bind                              # show button bindings
+python3 hawkctl.py bind BUTTON_6 media.volume_up     # remap a button
+python3 hawkctl.py bind BUTTON_6 none                # disable a button
+python3 hawkctl.py macro set --slot 0 --name hi \
+        --actions keyboard.h:press:0,keyboard.h:release:20,keyboard.i:press:40,keyboard.i:release:60
+python3 hawkctl.py bind BUTTON_7 macro:0 --mode repeat --cycles 1
 python3 hawkctl.py defaults                         # restore defaults
 python3 hawkctl.py --dry-run lighting --mode 1      # print frames, send nothing
 ```
+
+Bindable actions: `mouse.left/right/middle/back/forward`, `mouse.dpi_up/down/cycle`,
+`dpi.lock_200`…`dpi.lock_1200`, `media.*`, `shortcut.*` (copy, paste, show_desktop, …),
+`lighting.toggle`, `none`, or `macro:<slot>` (with `--mode repeat|button|toggle`).
 
 Lighting modes: `0` Off, `1` Rainbow Flow, `2` Breathe, `3` Steady, `4` Neon,
 `5` Marquee, `6` Rainbow Steady, `7` Wave. The Hawk Pro has no per-mode colour

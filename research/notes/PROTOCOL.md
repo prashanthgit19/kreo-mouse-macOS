@@ -5,8 +5,8 @@ Windows machine were required: Kreo ships the driver as WebAssembly, so we run
 it offline as an oracle (`research/oracle/`) and record the frames it emits.
 
 Status: DPI (values + stage switch), lighting (mode/brightness/speed), report
-rate, lift-off distance and sensor toggles are implemented and verified on real
-hardware. Macros, button remapping and sleep are not yet implemented.
+rate, lift-off distance, sensor toggles, button remapping and on-board macros
+are implemented and verified on real hardware.
 
 ## Device
 
@@ -142,6 +142,61 @@ the timeout does not appear to be settable through this frame. Unresolved.
 [3..30] 0xFF
 ```
 
+### 0x01 — button bindings
+
+One frame rewrites the whole table. The payload is eight 3-byte entries (one per
+button), followed by `FF FF FF`:
+
+```
+[0..2]   button 1 binding
+[3..5]   button 2
+...
+[21..23] button 8
+[24..26] 0xFF
+```
+
+Each binding is `[type][value lo][value hi]`:
+
+| type | meaning | value |
+|---|---|---|
+| `0x10` | mouse button | bitmask: left 0x01, right 0x02, middle 0x04, back 0x08, forward 0x10 |
+| `0x30` | fire key / triple click | `0x0032`, `0x0332` |
+| `0x40` | DPI action | 1 cycle, 2 up, 3 down |
+| `0x50` | DPI lock | `dpi/100 - 1` |
+| `0x60` | system | 0 disabled, 4 lighting toggle |
+| `0x70` | shortcut | `[modifier mask][HID usage]`, ctrl 0x01 / shift 0x02 / alt 0x04 / win 0x08 |
+| `0x80` | media | HID consumer usage (e.g. 0x00CD play/pause) |
+| `0x90` | macro slot | `[exec flags][0x20 + slot]` |
+
+Macro execution flags: repeat = cycle count, `0x11` = until released (hold),
+`0x41` = until any pressed (toggle).
+
+**Slot order:** the driver writes BUTTON_4 into entry 4 and BUTTON_5 into entry 3
+— i.e. entries 4 and 5 are swapped relative to the button names.
+
+The full generated table is in `research/notes/bindings.json`.
+
+### 0x11 / 0x10 — macro slot contents
+
+Writing a macro is two or more frames:
+
+1. `0x11` with payload `FF` + 26 zero bytes (prepare).
+2. one or more `0x10` frames, each carrying up to **25 payload bytes**:
+
+```
+[0]      length = 1 + bytes in this frame
+[1]      slot + 1
+[2..]    action bytes (3 per action)
+```
+
+Each action is 3 bytes: `[0x30 | (delay>>8) | (release ? 0x80 : 0)][delay & 0xFF][HID usage]`.
+Delay is 0–4095 ms (matches the schema). The key is a standard HID keyboard
+usage (`a` 0x04 … `z` 0x1D, `1` 0x1E … `0` 0x27, `enter` 0x28, `f1` 0x3A …).
+
+The macro *name* is not sent to the device — it is host-side only. Execution
+type and cycle count are encoded in the button binding (type `0x90`), not here.
+The generated key table is `research/notes/macro-keys.json`.
+
 ## Reading state
 
 The device pushes input report 4 (31 bytes) — e.g. `01 03 01 00 02 05 00 01 06 …`
@@ -180,8 +235,10 @@ node oracle.mjs call applyLighting '{"channel":"main","modeId":3}' --live --allo
 
 ## Still open
 
-* Macros and button remapping use feature report `0xBD`/`0xBE`/`0xBF`
-  (135 bytes, wired only). Not decoded yet.
-* Sleep timer: not settable via the frames the driver emits.
-* Dongle vs wired: config paths differ slightly (report set).
+* Sleep timer: the driver emits the same frame whatever `sleepIndex` is passed,
+  so it does not appear settable through the frames the driver produces.
+* Custom shortcuts (`combo.any`): the modifier byte is decoded but the key field
+  in the payload has not been identified.
+* Dongle vs wired: config paths differ slightly (report set, and the wired
+  interface also exposes the 135-byte reports `0xBD`–`0xBF`, unused so far).
 * Firmware update: out of scope (bricking risk).

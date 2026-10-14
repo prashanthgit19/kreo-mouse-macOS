@@ -1,0 +1,409 @@
+[
+ {
+  "label": "n=7",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    },
+    {
+     "codeId": "keyboard.b",
+     "event": "release",
+     "delayMs": 1
+    },
+    {
+     "codeId": "keyboard.c",
+     "event": "press",
+     "delayMs": 2
+    },
+    {
+     "codeId": "keyboard.d",
+     "event": "release",
+     "delayMs": 3
+    },
+    {
+     "codeId": "keyboard.e",
+     "event": "press",
+     "delayMs": 4
+    },
+    {
+     "codeId": "keyboard.f",
+     "event": "release",
+     "delayMs": 5
+    },
+    {
+     "codeId": "keyboard.g",
+     "event": "press",
+     "delayMs": 6
+    }
+   ]
+  }
+ },
+ {
+  "label": "n=8",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    },
+    {
+     "codeId": "keyboard.b",
+     "event": "release",
+     "delayMs": 1
+    },
+    {
+     "codeId": "keyboard.c",
+     "event": "press",
+     "delayMs": 2
+    },
+    {
+     "codeId": "keyboard.d",
+     "event": "release",
+     "delayMs": 3
+    },
+    {
+     "codeId": "keyboard.e",
+     "event": "press",
+     "delayMs": 4
+    },
+    {
+     "codeId": "keyboard.f",
+     "event": "release",
+     "delayMs": 5
+    },
+    {
+     "codeId": "keyboard.g",
+     "event": "press",
+     "delayMs": 6
+    },
+    {
+     "codeId": "keyboard.h",
+     "event": "release",
+     "delayMs": 7
+    }
+   ]
+  }
+ },
+ {
+  "label": "n=9",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    },
+    {
+     "codeId": "keyboard.b",
+     "event": "release",
+     "delayMs": 1
+    },
+    {
+     "codeId": "keyboard.c",
+     "event": "press",
+     "delayMs": 2
+    },
+    {
+     "codeId": "keyboard.d",
+     "event": "release",
+     "delayMs": 3
+    },
+    {
+     "codeId": "keyboard.e",
+     "event": "press",
+     "delayMs": 4
+    },
+    {
+     "codeId": "keyboard.f",
+     "event": "release",
+     "delayMs": 5
+    },
+    {
+     "codeId": "keyboard.g",
+     "event": "press",
+     "delayMs": 6
+    },
+    {
+     "codeId": "keyboard.h",
+     "event": "release",
+     "delayMs": 7
+    },
+    {
+     "codeId": "keyboard.i",
+     "event": "press",
+     "delayMs": 8
+    }
+   ]
+  }
+ },
+ {
+  "label": "n=10",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    },
+    {
+     "codeId": "keyboard.b",
+     "event": "release",
+     "delayMs": 1
+    },
+    {
+     "codeId": "keyboard.c",
+     "event": "press",
+     "delayMs": 2
+    },
+    {
+     "codeId": "keyboard.d",
+     "event": "release",
+     "delayMs": 3
+    },
+    {
+     "codeId": "keyboard.e",
+     "event": "press",
+     "delayMs": 4
+    },
+    {
+     "codeId": "keyboard.f",
+     "event": "release",
+     "delayMs": 5
+    },
+    {
+     "codeId": "keyboard.g",
+     "event": "press",
+     "delayMs": 6
+    },
+    {
+     "codeId": "keyboard.h",
+     "event": "release",
+     "delayMs": 7
+    },
+    {
+     "codeId": "keyboard.i",
+     "event": "press",
+     "delayMs": 8
+    },
+    {
+     "codeId": "keyboard.j",
+     "event": "release",
+     "delayMs": 9
+    }
+   ]
+  }
+ },
+ {
+  "label": "n=16",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    },
+    {
+     "codeId": "keyboard.b",
+     "event": "release",
+     "delayMs": 1
+    },
+    {
+     "codeId": "keyboard.c",
+     "event": "press",
+     "delayMs": 2
+    },
+    {
+     "codeId": "keyboard.d",
+     "event": "release",
+     "delayMs": 3
+    },
+    {
+     "codeId": "keyboard.e",
+     "event": "press",
+     "delayMs": 4
+    },
+    {
+     "codeId": "keyboard.f",
+     "event": "release",
+     "delayMs": 5
+    },
+    {
+     "codeId": "keyboard.g",
+     "event": "press",
+     "delayMs": 6
+    },
+    {
+     "codeId": "keyboard.h",
+     "event": "release",
+     "delayMs": 7
+    },
+    {
+     "codeId": "keyboard.i",
+     "event": "press",
+     "delayMs": 8
+    },
+    {
+     "codeId": "keyboard.j",
+     "event": "release",
+     "delayMs": 9
+    },
+    {
+     "codeId": "keyboard.k",
+     "event": "press",
+     "delayMs": 10
+    },
+    {
+     "codeId": "keyboard.l",
+     "event": "release",
+     "delayMs": 11
+    },
+    {
+     "codeId": "keyboard.m",
+     "event": "press",
+     "delayMs": 12
+    },
+    {
+     "codeId": "keyboard.n",
+     "event": "release",
+     "delayMs": 13
+    },
+    {
+     "codeId": "keyboard.o",
+     "event": "press",
+     "delayMs": 14
+    },
+    {
+     "codeId": "keyboard.p",
+     "event": "release",
+     "delayMs": 15
+    }
+   ]
+  }
+ },
+ {
+  "label": "n=17",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    },
+    {
+     "codeId": "keyboard.b",
+     "event": "release",
+     "delayMs": 1
+    },
+    {
+     "codeId": "keyboard.c",
+     "event": "press",
+     "delayMs": 2
+    },
+    {
+     "codeId": "keyboard.d",
+     "event": "release",
+     "delayMs": 3
+    },
+    {
+     "codeId": "keyboard.e",
+     "event": "press",
+     "delayMs": 4
+    },
+    {
+     "codeId": "keyboard.f",
+     "event": "release",
+     "delayMs": 5
+    },
+    {
+     "codeId": "keyboard.g",
+     "event": "press",
+     "delayMs": 6
+    },
+    {
+     "codeId": "keyboard.h",
+     "event": "release",
+     "delayMs": 7
+    },
+    {
+     "codeId": "keyboard.i",
+     "event": "press",
+     "delayMs": 8
+    },
+    {
+     "codeId": "keyboard.j",
+     "event": "release",
+     "delayMs": 9
+    },
+    {
+     "codeId": "keyboard.k",
+     "event": "press",
+     "delayMs": 10
+    },
+    {
+     "codeId": "keyboard.l",
+     "event": "release",
+     "delayMs": 11
+    },
+    {
+     "codeId": "keyboard.m",
+     "event": "press",
+     "delayMs": 12
+    },
+    {
+     "codeId": "keyboard.n",
+     "event": "release",
+     "delayMs": 13
+    },
+    {
+     "codeId": "keyboard.o",
+     "event": "press",
+     "delayMs": 14
+    },
+    {
+     "codeId": "keyboard.p",
+     "event": "release",
+     "delayMs": 15
+    },
+    {
+     "codeId": "keyboard.q",
+     "event": "press",
+     "delayMs": 16
+    }
+   ]
+  }
+ }
+]

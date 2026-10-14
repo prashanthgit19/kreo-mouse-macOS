@@ -1,0 +1,42 @@
+[
+ {
+  "label": "UR slot3",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "macro.slot",
+   "parameters": {
+    "macroSlot": 3,
+    "macroExecutionType": "UNTIL_RELEASED"
+   }
+  }
+ },
+ {
+  "label": "UA slot5",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "macro.slot",
+   "parameters": {
+    "macroSlot": 5,
+    "macroExecutionType": "UNTIL_ANY_PRESSED"
+   }
+  }
+ },
+ {
+  "label": "FC slot7 cyc9",
+  "method": "applyControlBinding",
+  "payload": {
+   "controlId": "BUTTON_1",
+   "layer": 0,
+   "optionId": "macro.slot",
+   "parameters": {
+    "macroSlot": 7,
+    "macroExecutionType": "FIXED_COUNT",
+    "macroCycleCount": 9
+   }
+  }
+ }
+]

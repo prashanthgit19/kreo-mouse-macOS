@@ -1,0 +1,205 @@
+[
+ {
+  "label": "baseline",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "test",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 2,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    },
+    {
+     "codeId": "keyboard.a",
+     "event": "release",
+     "delayMs": 50
+    }
+   ]
+  }
+ },
+ {
+  "label": "slot=3",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 3,
+   "name": "test",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 2,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    },
+    {
+     "codeId": "keyboard.a",
+     "event": "release",
+     "delayMs": 50
+    }
+   ]
+  }
+ },
+ {
+  "label": "name=longername",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "longername",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 2,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    },
+    {
+     "codeId": "keyboard.a",
+     "event": "release",
+     "delayMs": 50
+    }
+   ]
+  }
+ },
+ {
+  "label": "1 action",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "test",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 2,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "3 actions",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "test",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 2,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    },
+    {
+     "codeId": "keyboard.b",
+     "event": "press",
+     "delayMs": 10
+    },
+    {
+     "codeId": "keyboard.b",
+     "event": "release",
+     "delayMs": 20
+    }
+   ]
+  }
+ },
+ {
+  "label": "no actions",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "test",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 2,
+   "actions": []
+  }
+ },
+ {
+  "label": "UNTIL_RELEASED",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "test",
+   "executionType": "UNTIL_RELEASED",
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    },
+    {
+     "codeId": "keyboard.a",
+     "event": "release",
+     "delayMs": 50
+    }
+   ]
+  }
+ },
+ {
+  "label": "cycleCount=5",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "test",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 5,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    },
+    {
+     "codeId": "keyboard.a",
+     "event": "release",
+     "delayMs": 50
+    }
+   ]
+  }
+ },
+ {
+  "label": "key=media.play_pause",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "test",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 2,
+   "actions": [
+    {
+     "codeId": "media.play_pause",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "delay=5000",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "test",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 2,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    },
+    {
+     "codeId": "keyboard.a",
+     "event": "release",
+     "delayMs": 5000
+    }
+   ]
+  }
+ }
+]

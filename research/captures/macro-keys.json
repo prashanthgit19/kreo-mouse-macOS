@@ -1,0 +1,1481 @@
+[
+ {
+  "label": "keyboard.a",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.a",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.b",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.b",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.c",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.c",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.d",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.d",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.e",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.e",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.f",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.f",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.g",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.g",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.h",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.h",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.i",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.i",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.j",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.j",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.k",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.k",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.l",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.l",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.m",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.m",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.n",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.n",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.o",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.o",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.p",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.p",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.q",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.q",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.r",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.r",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.s",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.s",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.t",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.t",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.u",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.u",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.v",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.v",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.w",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.w",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.x",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.x",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.y",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.y",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.z",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.z",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.digit1",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.digit1",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.digit2",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.digit2",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.digit3",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.digit3",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.digit4",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.digit4",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.digit5",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.digit5",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.digit6",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.digit6",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.digit7",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.digit7",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.digit8",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.digit8",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.digit9",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.digit9",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.digit0",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.digit0",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.enter",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.enter",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.escape",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.escape",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.backspace",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.backspace",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.tab",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.tab",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.space",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.space",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.minus",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.minus",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.equal",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.equal",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.bracket_left",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.bracket_left",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.bracket_right",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.bracket_right",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.backslash",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.backslash",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.semicolon",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.semicolon",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.quote",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.quote",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.backquote",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.backquote",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.comma",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.comma",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.period",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.period",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.slash",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.slash",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.caps_lock",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.caps_lock",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.f1",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.f1",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.f2",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.f2",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.f3",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.f3",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.f4",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.f4",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.f5",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.f5",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.f6",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.f6",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.f7",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.f7",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.f8",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.f8",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.f9",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.f9",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.f10",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.f10",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.f11",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.f11",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.f12",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.f12",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.print_screen",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.print_screen",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.scroll_lock",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.scroll_lock",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.pause",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.pause",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.insert",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.insert",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.home",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.home",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.page_up",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.page_up",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.delete",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.delete",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.end",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.end",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.page_down",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.page_down",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.arrow_right",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.arrow_right",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.arrow_left",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.arrow_left",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.arrow_down",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.arrow_down",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "keyboard.arrow_up",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "keyboard.arrow_up",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "modifier.ctrl",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "modifier.ctrl",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "modifier.shift",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "modifier.shift",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "modifier.alt",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "modifier.alt",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "modifier.meta",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "modifier.meta",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "mouse.left",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "mouse.left",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "mouse.right",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "mouse.right",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "mouse.middle",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "mouse.middle",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "mouse.back",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "mouse.back",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ },
+ {
+  "label": "mouse.forward",
+  "method": "applyMacroSlot",
+  "payload": {
+   "slot": 0,
+   "name": "x",
+   "executionType": "FIXED_COUNT",
+   "cycleCount": 1,
+   "actions": [
+    {
+     "codeId": "mouse.forward",
+     "event": "press",
+     "delayMs": 0
+    }
+   ]
+  }
+ }
+]
