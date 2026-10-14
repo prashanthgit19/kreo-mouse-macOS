@@ -176,25 +176,26 @@ Macro execution flags: repeat = cycle count, `0x11` = until released (hold),
 
 The full generated table is in `research/notes/bindings.json`.
 
-#### Shortcut bindings (`0x70`) — unresolved
+#### Shortcut bindings (`0x70`) — works
 
-Arbitrary combinations are encodable: the payload is
-`combo.any` with `parameters.modifiers` (bits: ctrl `0x01`, shift `0x02`,
-alt `0x04`, cmd/win `0x08`) and the key in `parameters.multimediaCode` (a HID
-keyboard usage). Cmd+C is therefore `70 08 06`.
+Arbitrary combinations are encodable: the payload is `combo.any` with
+`parameters.modifiers` (bits: ctrl `0x01`, shift `0x02`, alt `0x04`, cmd/win
+`0x08`) and the key in `parameters.multimediaCode` (a HID keyboard usage).
+Cmd+C is therefore `70 08 06`.
 
-On the tested Hawk Pro we could **not** get a `0x70` binding to emit a
-keystroke on macOS: `media.*` (`0x80`) and `macro.*` (`0x90`) bindings in the
-same frame demonstrably work, but shortcut bindings never produced input, and
-frames containing them often failed to apply at all. It looks like the firmware
-does not implement keyboard-shortcut emission for this model — its only
-keyboard output is the macro engine, which cannot hold modifiers. Kreo's own
-`shortcut.*` presets are therefore Ctrl/Win-based *and* inert here.
+Verified on hardware: the side buttons bound to `70 01 4F` (Ctrl+→) and
+`70 01 50` (Ctrl+←) switch macOS Spaces. Kreo's own `shortcut.*` presets
+(Ctrl+C and friends) are therefore *not* Windows-only — on macOS they map to
+whatever the Ctrl combinations do, and arbitrary Command-based ones can be
+built with `combo:`.
 
-The CLI still exposes `combo:`/`mac:` so the encoding is available if a
-different firmware supports it. For real Cmd-based shortcuts on macOS, a
-host-side helper (watch the extra mouse buttons, synthesise Cmd+C via CGEvent)
-is the reliable route.
+#### The device can stop accepting binding writes
+
+An earlier round of testing wrongly concluded shortcut bindings were inert.
+The real cause: the mouse eventually stops accepting `0x01` (binding) writes
+altogether — writes still return success and other commands (DPI, lighting,
+macros) keep working, but the binding table no longer changes. **Power-cycling
+the mouse restores it**, after which writes apply normally.
 
 #### Writes should be acknowledged
 

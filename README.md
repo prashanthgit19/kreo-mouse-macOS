@@ -55,7 +55,20 @@ python3 hawkctl.py --dry-run lighting --mode 1      # print frames, send nothing
 
 Bindable actions: `mouse.left/right/middle/back/forward`, `mouse.dpi_up/down/cycle`,
 `dpi.lock_200`…`dpi.lock_1200`, `media.*`, `shortcut.*` (copy, paste, show_desktop, …),
-`lighting.toggle`, `none`, or `macro:<slot>` (with `--mode repeat|button|toggle`).
+`lighting.toggle`, `none`, `macro:<slot>` (with `--mode repeat|button|toggle`), or any
+key combination with `combo:<mods>+<key>` (e.g. `combo:ctrl+arrow_right`) and
+macOS-friendly aliases with `mac:<name>` (copy, paste, show-desktop, spotlight, …).
+
+Example — side buttons to switch macOS Spaces:
+
+```bash
+python3 hawkctl.py bind BUTTON_4 combo:ctrl+arrow_right   # forward
+python3 hawkctl.py bind BUTTON_5 combo:ctrl+arrow_left    # back
+```
+
+> If a binding change doesn't take effect, power-cycle the mouse (off/on, or
+> replug the dongle). The device sometimes stops accepting binding writes while
+> still reporting success; a power cycle clears it.
 
 Lighting modes: `0` Off, `1` Rainbow Flow, `2` Breathe, `3` Steady, `4` Neon,
 `5` Marquee, `6` Rainbow Steady, `7` Wave. The Hawk Pro has no per-mode colour

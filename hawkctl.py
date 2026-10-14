@@ -166,6 +166,9 @@ def next_seq(state: dict) -> int:
 # ---------------------------------------------------------------------------
 
 def send(frames: list[bytes], dry: bool = False) -> None:
+    if not dry:
+        # Open a config session the way the vendor driver's connect() does.
+        subprocess.run([str(HIDTOOL), "get", "5", "64"], capture_output=True, text=True)
     for fr in frames:
         if dry:
             print(f"  DRY  {fr.hex(' ')}")
@@ -186,6 +189,7 @@ def send(frames: list[bytes], dry: bool = False) -> None:
         # The vendor driver always reads report 6 back after a write; mirror that.
         subprocess.run([str(HIDTOOL), "get", str(REPORT_ID), "64"],
                        capture_output=True, text=True)
+        time.sleep(0.12)  # let the device settle between frames
 
 
 def read_report(rid: int, length: int = 64) -> bytes:
@@ -474,6 +478,8 @@ def cmd_bind(state: dict, args) -> None:
         save_state(state)
     send([frame_control_bindings(state)], args.dry_run)
     print(f"{control} -> {state['bindings'][control]}")
+    if not args.dry_run:
+        print("  (if it doesn't take effect, power-cycle the mouse once)")
 
 
 def cmd_macro(state: dict, args) -> None:
